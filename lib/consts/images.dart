@@ -1,6 +1,16 @@
 //icons
-const HOME = "asset/icons/home.png";
-const Neworder = "asset/icons/New order.png";
-const Ongoing = "asset/icons/on_going.png";
-const Delivered = "asset/icons/Delivered.png";
-const Wallet = "asset/icons/bx_wallet.png";
+const home = "asset/icons/home.png";
+const newOrder = "asset/icons/list.png";
+const onGoing = "asset/icons/ongoing.png";
+const delivered = "asset/icons/delivered.png";
+const wallet = "asset/icons/wallet.png";
+const notification = "asset/icons/notification.png";
+const profile = "asset/icons/profile.png";
+const numbers = "asset/icons/numbers.png";
+const days = "asset/icons/days.png";
+const lineChat1 = "asset/icons/Line Chart (1).png";
+const lineChat2 = "asset/icons/Line Chart (2).png";
+const share = "asset/icons/share.png";
+const checkProfile = "asset/icons/check_profile.png";
+const logOut = "asset/icons/log_out.png";
+
