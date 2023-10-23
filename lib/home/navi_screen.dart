@@ -1,6 +1,7 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/home/dashboard_screen.dart';
+import 'package:delivery_app/home/on-going_screen.dart';
 import 'package:delivery_app/home/order_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class _NaviScreenState extends State<NaviScreen> {
   final List<Widget> _className2 = [
     const DashboardScreen(),
     const OrderScreen(),
-    const Text('data3'),
+    const OnGoingScreen(),
     const Text('data4'),
     const Text('data5'),
   ];
