@@ -16,7 +16,7 @@ class _NaviScreenState extends State<NaviScreen> {
   int _selectedIndex = 0;
   final List<Widget> _className2 = [
     const DashboardScreen(),
-    const OrderScreen(),
+    const OrderTabBarScreen(),
     const Text('data3'),
     const Text('data4'),
     const Text('data5'),
@@ -31,21 +31,26 @@ class _NaviScreenState extends State<NaviScreen> {
           elevation: 0,
           backgroundColor: whiteColor,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: yellowColor,
+          selectedItemColor: liteBlackColor,
           items:[
             BottomNavigationBarItem(
+              activeIcon:Image.asset(home,color: yellowColor),
                 icon: Image.asset(home),
                 label: "Home"),
             BottomNavigationBarItem(
+              activeIcon: Image.asset(newOrder,color: yellowColor),
                 icon: Image.asset(newOrder),
                 label: "New order"),
             BottomNavigationBarItem(
+                activeIcon: Image.asset(onGoing,color: yellowColor),
                 icon: Image.asset(onGoing),
                 label: "On-going"),
             BottomNavigationBarItem(
+                activeIcon: Image.asset(delivered,color: yellowColor),
                 icon: Image.asset(delivered),
                 label: "Delivered "),
             BottomNavigationBarItem(
+                activeIcon: Image.asset(wallet,color: yellowColor),
                 icon: Image.asset(wallet),
                 label: "Wallet"),
           ],

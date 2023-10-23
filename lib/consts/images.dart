@@ -13,4 +13,8 @@ const lineChat2 = "asset/icons/Line Chart (2).png";
 const share = "asset/icons/share.png";
 const checkProfile = "asset/icons/check_profile.png";
 const logOut = "asset/icons/log_out.png";
+const redWallet = "asset/icons/redWallet.png";
+const location = "asset/icons/location.png";
 
+// images
+const photo = "asset/images/photo.png";
