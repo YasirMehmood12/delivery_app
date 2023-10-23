@@ -16,7 +16,7 @@ class _NaviScreenState extends State<NaviScreen> {
   int _selectedIndex = 0;
   final List<Widget> _className2 = [
     const DashboardScreen(),
-    const OrderTabBarScreen(),
+    const OrderScreen(),
     const Text('data3'),
     const Text('data4'),
     const Text('data5'),
