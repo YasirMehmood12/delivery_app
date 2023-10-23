@@ -6,4 +6,5 @@ const Color liteGreyColor = Color(0xff999999);
 const Color whiteColor = Color(0xffFFFFFF);
 const Color blueColor = Color(0xff0062FF);
 const Color tealColor = Color(0xff3DD598);
+const Color bgColor = Color(0xffF2F6FF);
 
