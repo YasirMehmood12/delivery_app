@@ -18,3 +18,4 @@ const location = "asset/icons/location.png";
 
 // images
 const photo = "asset/images/photo.png";
+const map = "asset/images/map.png";

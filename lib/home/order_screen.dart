@@ -2,18 +2,17 @@ import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/home/inbox_tabbar_screen.dart';
-import 'package:delivery_app/home/outgoing_tabbar1.dart';
+import 'package:delivery_app/home/outgoing_tabbar_screen.dart';
 import 'package:flutter/material.dart';
 
-class OrderTabBarScreen extends StatefulWidget {
-  const OrderTabBarScreen({super.key});
+class OrderScreen extends StatefulWidget {
+  const OrderScreen({super.key});
 
   @override
-  State<OrderTabBarScreen> createState() => _OrderTabBarScreenState();
+  State<OrderScreen> createState() => _OrderScreenState();
 }
 
-class _OrderTabBarScreenState extends State<OrderTabBarScreen>{
-
+class _OrderScreenState extends State<OrderScreen>{
 
   @override
   Widget build(BuildContext context) {
