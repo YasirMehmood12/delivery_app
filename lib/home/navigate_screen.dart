@@ -1,3 +1,4 @@
+import 'package:delivery_app/home/out_of_delivery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -161,7 +162,9 @@ class _NavigateScreenState extends State<NavigateScreen> {
                                       builder: (context, constraints) => _containerCircle()),
                                   const Spacer(),
                                   GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const OutOfDeliveryScreen()));
+                                    },
                                     child: Container(
                                       height: 45,width: 140,
                                       decoration: BoxDecoration(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color yellowColor = Color(0xffFFC700);
 const Color liteBlackColor = Color(0xff474747);
+const Color darkLiteColor = Color(0xff373636);
 const Color blackColor = Color(0xff2F2E36);
 const Color darkColor = Color(0xff535252);
 const Color greyColor = Color(0xff7B7B7B);
@@ -15,4 +16,5 @@ const Color tealLiteColor = Color(0xff109C9C);
 const Color tealColor = Color(0xff3DD598);
 const Color greenColor = Color(0xff4CAF50);
 const Color fulRedColor = Color(0xffC82727);
+const Color liteRedColor = Color(0xffFF2727);
 

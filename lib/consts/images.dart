@@ -20,6 +20,7 @@ const phone = "asset/icons/phone.png";
 const chat = "asset/icons/chaBlack.png";
 const call = "asset/icons/Call.png";
 const chatYellow = "asset/icons/Chat.png";
+const locationWay = "asset/icons/route.png";
 
 // images
 const photo = "asset/images/photo.png";

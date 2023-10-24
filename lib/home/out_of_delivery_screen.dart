@@ -52,7 +52,8 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            const SizedBox(height: 32),
+            20.heightBox,
+            /// first container
             Container(
               height: 210,
               decoration: BoxDecoration(
@@ -197,6 +198,7 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
               ),
             ),
             10.heightBox,
+            /// second container
             Container(
               height: 130, width: double.infinity,
               decoration: BoxDecoration(
@@ -300,17 +302,59 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
                 ],
               ),
             ),
-            30.heightBox,
+            20.heightBox,
+            /// finish route planing button
             GestureDetector(
               onTap: () {},
               child: Container(
                 height: 50,width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                     color: yellowColor),
-                child: const Center(
-                  child: CustomText(
-                    text: 'Active',color: whiteColor,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const CustomText(
+                        text: 'Finish route planing',color: whiteColor,
+                        fontSize: 18,fontWeight: FontWeight.w500,
+                      ),
+                      Container(
+                       height: 25,width: 25,
+                          decoration: const BoxDecoration(
+                            color: liteRedColor,shape: BoxShape.circle),
+                          child: const Center(child: Icon(Icons.close_rounded,color: whiteColor,))),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            /// big button location
+            50.heightBox,
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                height:100,width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: yellowColor),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const CustomText(
+                        text: 'View rout',color: whiteColor,
+                        fontSize: 24,fontWeight: FontWeight.w500,
+                      ),
+                      Container(
+                          height: 50,width: 50,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(image: AssetImage(locationWay))
+                              ),
+                          ),
+                    ],
                   ),
                 ),
               ),

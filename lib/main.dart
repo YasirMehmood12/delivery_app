@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: NaviScreen()
-      home: OutOfDeliveryScreen(),
+      home: NaviScreen()
     );
   }
 }
