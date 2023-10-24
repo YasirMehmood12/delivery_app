@@ -4,6 +4,7 @@ import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:timeline_tile/timeline_tile.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class OutGoingTabbarScreen extends StatefulWidget {
   const OutGoingTabbarScreen({super.key});
@@ -19,7 +20,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
       backgroundColor: Colors.grey.shade50,
       body: Column(
         children: <Widget>[
-          const SizedBox(height: 10),
+          10.heightBox,
           Container(
             height: 275,
             decoration: BoxDecoration(
@@ -84,17 +85,28 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                     children: [
                       /// lift size
                       SizedBox(
-                        height: 120,width: 200,
+                        height: 120,width: 210,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Row(
+                            Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Icon(Icons.circle_outlined,color: greenColor,size: 15),
-                                SizedBox(width: 12),
-                                Column(
+                                Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: liteWhiteColor,
+                                      width: 2
+                                    ),
+                                    shape: BoxShape.circle,
+                                  ),
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(5),
+                                      child: Icon(Icons.circle,color: greenColor,size: 8),
+                                    )),
+                                const SizedBox(width: 12),
+                                const Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     CustomText(text: '88 Zurab Gorgiladze St',fontSize: 15),
@@ -105,12 +117,12 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                               ],
                             ),
                             const SizedBox(height: 8),
-                            Row(
+                            const Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset(location),
-                                const SizedBox(width: 12),
-                                const Column(
+                                Icon(Icons.location_on_outlined,color: greenColor),
+                                SizedBox(width: 12),
+                                Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     SizedBox(height: 5),
@@ -126,7 +138,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                       /// right size
                       SizedBox(
-                        height: 120,width: 120,
+                        height: 120,width: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -147,14 +159,14 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                             SizedBox(
                               height: 60,width: 60,
                               child: TimelineTile(
-                                beforeLineStyle: LineStyle(
+                                beforeLineStyle: const LineStyle(
                                     color: liteWhiteColor
                                 ),
                                 indicatorStyle: const IndicatorStyle(
                                     color: liteWhiteColor),
-                                endChild: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                                  child: const Text('Drop'),
+                                endChild: const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 5),
+                                  child: Text('Drop'),
                                 ),
                                 isLast: true,
                               ),
@@ -168,7 +180,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          10.heightBox,
           Container(
             height: 370,
             decoration: BoxDecoration(
@@ -180,7 +192,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
               child: Column(
                 children: [
                   /// money and number and more vertical button
-                  const SizedBox(height: 25),
+                  25.heightBox,
                   Row(
                     children: [
                       const CustomText(text: '36 \$',fontSize: 17),
@@ -191,7 +203,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                     ],
                   ),
                   /// two Buttons
-                  const SizedBox(height: 8),
+                  8.heightBox,
                   Row(
                     children: [
                       GestureDetector(
@@ -210,25 +222,36 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  16.heightBox,
                   const Divider(),
-                  const SizedBox(height: 16),
+                  16.heightBox,
                   /// second text
                   Row(
                     children: [
                       /// lift size
                       SizedBox(
-                        height: 120,width: 200,
+                        height: 120,width: 210,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Row(
+                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Icon(Icons.circle_outlined,color: greenColor,size: 15),
-                                SizedBox(width: 12),
-                                Column(
+                                Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: liteWhiteColor,
+                                          width: 2
+                                      ),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(5),
+                                      child: Icon(Icons.circle,color: greenColor,size: 8),
+                                    )),
+                                const SizedBox(width: 12),
+                                const Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     CustomText(text: '24 Rustaveli Ave St',fontSize: 15),
@@ -242,7 +265,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset(location),
+                                Icon(Icons.location_on_outlined,color: greenColor),
                                 const SizedBox(width: 12),
                                 const Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -260,7 +283,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                       /// right size
                       SizedBox(
-                        height: 120,width: 120,
+                        height: 120,width: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -282,14 +305,14 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                             SizedBox(
                               height: 60,width: 60,
                               child: TimelineTile(
-                                beforeLineStyle: LineStyle(
+                                beforeLineStyle: const LineStyle(
                                     color: liteWhiteColor
                                 ),
                                 indicatorStyle: const IndicatorStyle(
                                     color: liteWhiteColor),
-                                endChild: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                                  child: const Text('Drop'),
+                                endChild: const Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 5),
+                                  child: Text('Drop'),
                                 ),
                                 isLast: true,
                               ),
@@ -299,9 +322,9 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  10.heightBox,
                   const Divider(),
-                  const SizedBox(height: 10),
+                  10.heightBox,
                   /// cirle image  and text and date
                   ListTile(
                     leading: const CircleAvatar(

@@ -1,8 +1,8 @@
-import 'package:delivery_app/consts/colors.dart';
-import 'package:delivery_app/home/navi_screen.dart';
+import 'package:delivery_app/home/out_of_delivery_screen.dart';
 import 'package:flutter/material.dart';
+import 'home/navi_screen.dart';
 
-void main() {
+void main()  {
   runApp(const MyApp());
 }
 
@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const NaviScreen()
+      // home: NaviScreen()
+      home: OutOfDeliveryScreen(),
     );
   }
 }

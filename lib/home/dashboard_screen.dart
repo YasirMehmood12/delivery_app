@@ -3,6 +3,7 @@ import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/model/dashboard_listview_model.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -37,7 +38,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  12.widthBox,
                   GestureDetector(
                     onTap:() {},
                     child: Container(
@@ -49,7 +50,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 13),
+                  13.widthBox,
                 ],
               ),
               ///left text and right text
@@ -99,10 +100,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
               const CustomText(text: 'Sales Figures',fontSize: 16,fontWeight: FontWeight.w500),
-              const SizedBox(height: 17),
-              const Row(
+              17.heightBox,
+              Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                     child: Row(
                       children: [
@@ -113,23 +114,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 22),
+                  22.heightBox,
                   SizedBox(
                     height: 20,
                     child: Row(
                       children: [
-                        CircleAvatar(radius: 5,
+                        const CircleAvatar(radius: 5,
                           backgroundColor: tealColor,),
-                        SizedBox(width: 5),
-                        CustomText(text: 'sales'),
+                        5.heightBox,
+                        const CustomText(text: 'sales'),
                       ],
                     ),
                   ),
-
-
                 ],
               ),
-              const SizedBox(height: 17),
+              17.heightBox,
               /// text and diagram
               Container(
                 height: 260,width: double.infinity,
@@ -165,7 +164,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ]),
                 ),
               ),
-              const SizedBox(height: 12),
+              12.heightBox,
               /// three button
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -181,7 +180,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const CustomText(text: "Withdraw ",color: whiteColor,fontSize: 11),
-                          Image.asset(share)
+                          Image.asset(shareWhite)
                         ],
                       )),
                     ),
@@ -208,7 +207,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 23),
+              23.heightBox,
               SizedBox(
                 height: 150, width: double.infinity,
                 child: ListView.builder(

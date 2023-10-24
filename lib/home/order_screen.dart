@@ -4,6 +4,7 @@ import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/home/inbox_tabbar_screen.dart';
 import 'package:delivery_app/home/outgoing_tabbar_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});
@@ -51,10 +52,10 @@ class _OrderScreenState extends State<OrderScreen>{
                       image: DecorationImage(image: AssetImage(profile))),
                 ),
               ),
-              const SizedBox(width: 13),
+              13.widthBox,
             ],
           ),
-            const SizedBox(height: 32),
+            32.heightBox,
             /// wallet text button
               Container(
             height: 60,width: double.infinity,
@@ -64,9 +65,9 @@ class _OrderScreenState extends State<OrderScreen>{
             ),
             child: Row(
               children: [
-                const SizedBox(width: 12),
+               12.widthBox,
                 Image.asset(redWallet),
-                const SizedBox(width: 8),
+                8.widthBox,
                 const CustomText(text: "6,730 \$"),
                 const Spacer(),
                 GestureDetector(
@@ -80,7 +81,7 @@ class _OrderScreenState extends State<OrderScreen>{
             ),
           ),
             /// two buttons
-              const SizedBox(height: 16),
+              16.heightBox,
               Container(
                 height: 725,
                width: double.infinity,
