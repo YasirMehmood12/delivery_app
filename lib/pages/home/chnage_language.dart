@@ -1,7 +1,8 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../custom_widgets/our_text.dart';
+import '../../custom_widgets/our_text.dart';
+
 
 class ChangeLanguage extends StatefulWidget {
   const ChangeLanguage({super.key});

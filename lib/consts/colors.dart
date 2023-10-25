@@ -8,6 +8,7 @@ const Color darkColor = Color(0xff535252);
 const Color greyColor = Color(0xff7B7B7B);
 const Color liteWhiteColor = Color(0xffD9D9D9);
 const Color liteWhite2Color = Color(0xffF5F5F5);
+const Color white3Color = Color(0xffE7EFFF);
 const Color veryGreyColor = Color(0xffDDDDDD);
 const Color liteGreyColor = Color(0xff999999);
 const Color whiteColor = Color(0xffFFFFFF);

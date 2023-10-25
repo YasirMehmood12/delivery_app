@@ -3,8 +3,7 @@ import 'package:delivery_app/custom_widgets/our_button.dart';
 import 'package:delivery_app/custom_widgets/our_text.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-
-import '../consts/colors.dart';
+import '../../consts/colors.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({super.key});

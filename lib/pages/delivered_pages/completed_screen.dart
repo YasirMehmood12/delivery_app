@@ -1,9 +1,10 @@
 import 'package:delivery_app/model/delivered_model.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../consts/colors.dart';
-import '../consts/images.dart';
-import '../custom_widgets/custom_text.dart';
+import '../../consts/colors.dart';
+import '../../consts/images.dart';
+import '../../custom_widgets/custom_text.dart';
+
 
 class CompletedScreen extends StatefulWidget {
 

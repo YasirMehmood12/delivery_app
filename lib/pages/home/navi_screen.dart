@@ -1,11 +1,10 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
-import 'package:delivery_app/home/completed_screen.dart';
-import 'package:delivery_app/home/dashboard_screen.dart';
-import 'package:delivery_app/home/on-going_screen.dart';
-import 'package:delivery_app/home/order_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../delivered_pages/completed_screen.dart';
+import '../new_order_pages/order_screen.dart';
+import '../on_going_pages/on-going_screen.dart';
+import 'dashboard_screen.dart';
 
 class NaviScreen extends StatefulWidget {
   const NaviScreen({Key? key}) : super(key: key);

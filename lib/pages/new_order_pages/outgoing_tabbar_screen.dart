@@ -1,11 +1,12 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
-import 'package:delivery_app/home/order_options_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+import 'order_options_screen.dart';
 
 class OutGoingTabbarScreen extends StatefulWidget {
   const OutGoingTabbarScreen({super.key});

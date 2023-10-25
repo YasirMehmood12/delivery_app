@@ -1,9 +1,5 @@
-import 'package:delivery_app/home/change_password.dart';
-import 'package:delivery_app/home/chnage_language.dart';
-import 'package:delivery_app/home/out_of_delivery_screen.dart';
+import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
-import 'home/customer_supports.dart';
-import 'home/navi_screen.dart';
 
 void main()  {
   runApp(const MyApp());

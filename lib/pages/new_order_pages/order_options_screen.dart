@@ -1,10 +1,11 @@
-import 'package:delivery_app/home/signature_navi_screen.dart';
+import 'package:delivery_app/pages/new_order_pages/signature_navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:signature/signature.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../consts/colors.dart';
-import '../consts/images.dart';
-import '../custom_widgets/custom_text.dart';
+
+import '../../consts/colors.dart';
+import '../../consts/images.dart';
+import '../../custom_widgets/custom_text.dart';
 
 class OrderOptionScreen extends StatefulWidget {
   const OrderOptionScreen({super.key});

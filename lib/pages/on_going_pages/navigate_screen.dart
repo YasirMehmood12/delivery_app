@@ -1,10 +1,10 @@
-import 'package:delivery_app/home/out_of_delivery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../consts/colors.dart';
-import '../consts/images.dart';
-import '../custom_widgets/custom_text.dart';
+import '../../consts/colors.dart';
+import '../../consts/images.dart';
+import '../../custom_widgets/custom_text.dart';
+import 'out_of_delivery_screen.dart';
 
 class NavigateScreen extends StatefulWidget {
   const NavigateScreen({super.key});

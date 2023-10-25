@@ -1,9 +1,9 @@
-import 'package:delivery_app/home/navigate_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import '../consts/colors.dart';
-import '../consts/images.dart';
-import '../custom_widgets/custom_text.dart';
+import '../../consts/colors.dart';
+import '../../consts/images.dart';
+import '../../custom_widgets/custom_text.dart';
+import 'navigate_screen.dart';
 
 class OnGoingScreen extends StatefulWidget {
   const OnGoingScreen({super.key});

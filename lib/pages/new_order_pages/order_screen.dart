@@ -1,10 +1,11 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
-import 'package:delivery_app/home/inbox_tabbar_screen.dart';
-import 'package:delivery_app/home/outgoing_tabbar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+import 'inbox_tabbar_screen.dart';
+import 'outgoing_tabbar_screen.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});

@@ -2,8 +2,9 @@ import 'package:delivery_app/consts/images.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../consts/colors.dart';
-import '../custom_widgets/our_text.dart';
+import '../../consts/colors.dart';
+import '../../custom_widgets/our_text.dart';
+
 
 class CustomerSupport extends StatefulWidget {
   const CustomerSupport({super.key});

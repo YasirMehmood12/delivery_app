@@ -32,6 +32,7 @@ const sign = "asset/icons/sign.png";
 const signatureSign = "asset/icons/signatureSign.png";
 const qrCode = "asset/icons/qrcode.png";
 const camera = "asset/icons/camera.png";
+const loveHand = "asset/icons/loveHand.png";
 
 // images
 const photo = "asset/images/photo.png";
@@ -41,3 +42,5 @@ const photo4 = "asset/images/photo4.png";
 const photo5 = "asset/images/photo5.png";
 const photo6 = "asset/images/photo6.png";
 const map = "asset/images/map.png";
+const shoes = "asset/images/shoesImage.png";
+const qrCodeImage = "asset/images/qrcodeImage.png";
