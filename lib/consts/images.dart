@@ -26,6 +26,7 @@ const money = "asset/images/money.png";
 const whatsapp = "asset/images/whatsapp.png";
 const warning = "asset/images/warning.png";
 const rename = "asset/images/rename.png";
+const googleMap = "asset/images/google_map.png";
 
 // images
 const photo = "asset/images/photo.png";

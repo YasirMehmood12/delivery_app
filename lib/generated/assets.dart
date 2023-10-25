@@ -9,6 +9,8 @@ class Assets {
   static const String iconsDays = 'asset/icons/days.png';
   static const String iconsDelivered = 'asset/icons/delivered.png';
   static const String iconsHome = 'asset/icons/home.png';
+  //static const String iconsLine Chart (1) = 'asset/icons/Line Chart (1).png';
+  //static const String iconsLine Chart (2) = 'asset/icons/Line Chart (2).png';
   static const String iconsList = 'asset/icons/list.png';
   static const String iconsLocation = 'asset/icons/location.png';
   static const String iconsLogOut = 'asset/icons/log_out.png';
@@ -23,6 +25,7 @@ class Assets {
   static const String iconsShareYellow = 'asset/icons/shareYellow.png';
   static const String iconsWallet = 'asset/icons/wallet.png';
   static const String imagesCustomersupport = 'asset/images/customersupport.png';
+  static const String imagesGoogleMap = 'asset/images/google_map.png';
   static const String imagesMap = 'asset/images/map.png';
   static const String imagesMoney = 'asset/images/money.png';
   static const String imagesPhoto = 'asset/images/photo.png';
