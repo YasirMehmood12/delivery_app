@@ -18,3 +18,8 @@ const Color greenColor = Color(0xff4CAF50);
 const Color fulRedColor = Color(0xffC82727);
 const Color liteRedColor = Color(0xffFF2727);
 
+const Color dallBlackColor = Color(0xff5A5A5A);
+const Color whiteBackGround = Color(0xffF2F6FF);
+const Color redColor = Color(0xffC82727);
+
+const Color lightBlueColor = Color(0xff8DA6FF);
