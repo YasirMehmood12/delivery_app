@@ -26,43 +26,41 @@ class _NaviScreenState extends State<NaviScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: _className2.elementAt(_selectedIndex),
-        bottomNavigationBar: BottomNavigationBar(
-          elevation: 0,
-          backgroundColor: whiteColor,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: liteBlackColor,
-          items:[
-            BottomNavigationBarItem(
-              activeIcon:Image.asset(home,color: yellowColor),
-                icon: Image.asset(home),
-                label: "Home"),
-            BottomNavigationBarItem(
-              activeIcon: Image.asset(newOrder,color: yellowColor),
-                icon: Image.asset(newOrder),
-                label: "New order"),
-            BottomNavigationBarItem(
-                activeIcon: Image.asset(onGoing,color: yellowColor),
-                icon: Image.asset(onGoing),
-                label: "On-going"),
-            BottomNavigationBarItem(
-                activeIcon: Image.asset(delivered,color: yellowColor),
-                icon: Image.asset(delivered),
-                label: "Delivered "),
-            BottomNavigationBarItem(
-                activeIcon: Image.asset(wallet,color: yellowColor),
-                icon: Image.asset(wallet),
-                label: "Wallet"),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: ( int index) {
+    return Scaffold(
+      body: _className2.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+          onTap: (value) {
             setState(() {
-              _selectedIndex = index;
+              _selectedIndex = value;
             });
-          },)
-      ),
+          },
+          type: BottomNavigationBarType.fixed,
+          selectedLabelStyle: TextStyle(
+            color: liteBlackColor
+          ),
+          items: [
+        BottomNavigationBarItem(
+            activeIcon:Image.asset(home,color: yellowColor),
+            icon: Image.asset(home),
+            label: "Home"),
+        BottomNavigationBarItem(
+            activeIcon: Image.asset(newOrder,color: yellowColor),
+            icon: Image.asset(newOrder),
+            label: "New order"),
+        BottomNavigationBarItem(
+            activeIcon: Image.asset(onGoing,color: yellowColor),
+            icon: Image.asset(onGoing),
+            label: "On-going"),
+        BottomNavigationBarItem(
+            activeIcon: Image.asset(delivered,color: yellowColor),
+            icon: Image.asset(delivered),
+            label: "Delivered "),
+        BottomNavigationBarItem(
+            activeIcon: Image.asset(wallet,color: yellowColor),
+            icon: Image.asset(wallet),
+            label: "Wallet"),
+      ]),
     );
   }
 }

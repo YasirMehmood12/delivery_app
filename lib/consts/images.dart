@@ -29,6 +29,9 @@ const rename = "asset/images/rename.png";
 const googleMap = "asset/images/google_map.png";
 const signature = "asset/icons/signatureIcon.png";
 const sign = "asset/icons/sign.png";
+const signatureSign = "asset/icons/signatureSign.png";
+const qrCode = "asset/icons/qrcode.png";
+const camera = "asset/icons/camera.png";
 
 // images
 const photo = "asset/images/photo.png";
