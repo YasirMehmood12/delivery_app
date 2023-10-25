@@ -25,4 +25,8 @@ const locationWay = "asset/icons/route.png";
 // images
 const photo = "asset/images/photo.png";
 const photo2 = "asset/images/photo2.png";
+const photo3 = "asset/images/photo3.png";
+const photo4 = "asset/images/photo4.png";
+const photo5 = "asset/images/photo5.png";
+const photo6 = "asset/images/photo6.png";
 const map = "asset/images/map.png";
