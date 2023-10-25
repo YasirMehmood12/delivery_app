@@ -1,6 +1,5 @@
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:flutter/material.dart';
-import 'package:signature/signature.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../consts/colors.dart';
 import '../consts/images.dart';
@@ -47,59 +46,102 @@ class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          children: [
-            20.heightBox,
-            const CustomText(text: 'where did you leave the order?',fontSize: 19),
-            20.heightBox,
-            ///container signator
-            Container(
-              height: 250, width: 270,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: liteWhiteColor),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 10,top: 10),
-                    child: CustomText(text: 'Note',color: greyColor,fontSize: 19),
-                  ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              20.heightBox,
+              /// start text
+              const CustomText(
+                textAlign: TextAlign.center,
+                  text: 'Write the signer name and add a signature.',fontSize: 19),
+              20.heightBox,
+              /// image signature
+              Container(
+                height: 150, width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    image: const DecorationImage(image: AssetImage(signature))),
+              ),
+              20.heightBox,
+              /// text field
+              Container(
+                height: 50,width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                  color: whiteColor,),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Customer name',
 
+                      border: InputBorder.none
+                    ),
+                  ),
+                ),
+              ),
+              20.heightBox,
+              ///container signature and text
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const CustomText(text: 'Signature',fontWeight: FontWeight.w400,fontSize: 18),
+                    5.heightBox,
+                    Container(
+                      height: 200, width: MediaQuery.of(context).size.width*0.7,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: liteWhiteColor,
+                          image: const DecorationImage(image: AssetImage(sign))
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ///last two buttons
+              50.heightBox,
+              Row(
+                children: [
+                  Expanded(
+                    child: MyButton(
+                      height: 50,
+                      border: Border.all(color: fulRedColor),
+                      circularRadius: BorderRadius.circular(15),
+                      text: 'Close',
+                      onTap: () {},
+                      fontSize: 13,color: fulRedColor,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  20.widthBox,
+                  Expanded(
+                    child: MyButton(
+                      height: 50,
+                      containerColor: yellowColor,
+                        circularRadius: BorderRadius.circular(15),
+                      text: 'Done',
+                      onTap: () {},
+                      fontSize: 13,color: whiteColor,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ],
               ),
-            ),
-
-            const Spacer(),
-            Row(
-              children: [
-                Expanded(
-                  child: MyButton(
-                    containerColor: yellowColor,
-                    circularRadius: BorderRadius.circular(15),
-                    text: 'Close',
-                    onTap: () {},
-                    fontSize: 13,color: whiteColor,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                5.widthBox,
-                Expanded(
-                  child: MyButton(
-                    containerColor: yellowColor,
-                      circularRadius: BorderRadius.circular(15),
-                    text: 'Done',
-                    onTap: () {},
-                    fontSize: 13,color: whiteColor,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-            10.heightBox
-          ],
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          margin: EdgeInsets.only(left: 50,right: 50),
+          height: 50,
+          color: Colors.red,
         ),
       ),
     );
