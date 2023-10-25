@@ -1,4 +1,4 @@
-import 'package:delivery_app/home/order_update_screen.dart';
+import 'package:delivery_app/home/signature_navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:signature/signature.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -20,7 +20,7 @@ class _OrderOptionScreenState extends State<OrderOptionScreen> {
   void initState() {
     super.initState();
     controller = SignatureController(
-      penStrokeWidth: 2
+        penStrokeWidth: 2
     );
   }
   @override
@@ -80,7 +80,7 @@ class _OrderOptionScreenState extends State<OrderOptionScreen> {
               title: const CustomText(text: 'To customer'),
               leading: Checkbox(value: toCustomer, onChanged: (value) {
                 setState(() {
-                   toCustomer = value;
+                  toCustomer = value;
                 });
               },),
             ),
@@ -88,7 +88,7 @@ class _OrderOptionScreenState extends State<OrderOptionScreen> {
               title: const CustomText(text: 'To neighbors'),
               leading: Checkbox(value: toNeighbors, onChanged: (value) {
                 setState(() {
-                   toNeighbors = value;
+                  toNeighbors = value;
                 });
               },),
             ),
@@ -121,20 +121,20 @@ class _OrderOptionScreenState extends State<OrderOptionScreen> {
             Container(
               height: 250, width: 270,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: liteWhiteColor),
+                  borderRadius: BorderRadius.circular(15),
+                  color: liteWhiteColor),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                       const Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 10,top: 10),
                     child: CustomText(text: 'Note',color: greyColor,fontSize: 19),
                   ),
-                       Signature(
-                         dynamicPressureSupported: true,
-                        height: 210,
-                        width: 250,
-                    backgroundColor: liteWhiteColor,
+                  Signature(
+                      dynamicPressureSupported: true,
+                      height: 210,
+                      width: 250,
+                      backgroundColor: liteWhiteColor,
                       controller: controller
                   )
 
