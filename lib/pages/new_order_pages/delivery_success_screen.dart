@@ -1,3 +1,5 @@
+import 'package:delivery_app/pages/delivered_pages/completed_screen.dart';
+import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
@@ -69,7 +71,9 @@ class DeliverySuccessScreen extends StatelessWidget {
                     containerColor: yellowColor,
                     circularRadius: BorderRadius.circular(15),
                     height: 50,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NaviScreen(),));
+                    },
                     text: 'View deliveries',color: whiteColor,fontSize: 20),
               )
         ]));
