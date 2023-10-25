@@ -1,5 +1,8 @@
+import 'package:delivery_app/home/change_password.dart';
+import 'package:delivery_app/home/chnage_language.dart';
 import 'package:delivery_app/home/out_of_delivery_screen.dart';
 import 'package:flutter/material.dart';
+import 'home/customer_supports.dart';
 import 'home/navi_screen.dart';
 
 void main()  {
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NaviScreen()
+      home:ChangeLanguage(),
     );
   }
 }
