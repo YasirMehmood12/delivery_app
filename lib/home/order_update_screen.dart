@@ -1,3 +1,4 @@
+import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:flutter/material.dart';
 import 'package:signature/signature.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -75,38 +76,24 @@ class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
             Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
+                  child: MyButton(
+                    containerColor: yellowColor,
+                    circularRadius: BorderRadius.circular(15),
+                    text: 'Close',
                     onTap: () {},
-                    child: Container(
-                      height: 50,width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: yellowColor),
-                      child: const Center(
-                        child: CustomText(
-                          text: 'Close',color: whiteColor,
-                          fontSize: 13,fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
+                    fontSize: 13,color: whiteColor,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 5.widthBox,
                 Expanded(
-                  child: GestureDetector(
+                  child: MyButton(
+                    containerColor: yellowColor,
+                      circularRadius: BorderRadius.circular(15),
+                    text: 'Done',
                     onTap: () {},
-                    child: Container(
-                      height: 50,width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: yellowColor),
-                      child: const Center(
-                        child: CustomText(
-                          text: 'Done',color: whiteColor,
-                          fontSize: 13,fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
+                    fontSize: 13,color: whiteColor,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ],
