@@ -1,3 +1,4 @@
+import 'package:delivery_app/model/delivered_model.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../consts/colors.dart';
@@ -20,14 +21,12 @@ class _CompletedScreenState extends State<CompletedScreen> {
     "daily",
   ];
 
-  String selectiveItem2  = '1';
+  String selectiveItem2  = 'Today';
   List listItem2 = [
-    "1"
-    "2"
-    "3",
-    "4",
+    "Today",
+    "Tomorrow",
+    "Yesterday",
   ];
-
   @override
   Widget build(BuildContext context) {
 
@@ -88,9 +87,9 @@ class _CompletedScreenState extends State<CompletedScreen> {
                         value: valueItem,
                           child: CustomText(text: valueItem,color: whiteColor,));
                      }).toList(),
-                    onChanged: (value1) {
+                    onChanged: (newValue) {
                       setState(() {
-                        selectiveItem1 = value1 as String;
+                        selectiveItem1 = newValue as String;
                       });
                     },
                       ),
@@ -102,7 +101,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
               height: 215,width: double.infinity,
               child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: 3,
+                itemCount: toDayModelList.length,
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Column(
@@ -114,8 +113,8 @@ class _CompletedScreenState extends State<CompletedScreen> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: whiteColor),
-                        child: const ListTile(
-                          leading: CircleAvatar(radius: 20,backgroundImage: AssetImage(photo)),
+                        child: ListTile(
+                          leading: CircleAvatar(radius: 20,backgroundImage: toDayModelList[index].image ),
                           title: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,15 +122,15 @@ class _CompletedScreenState extends State<CompletedScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  CustomText(text: 'Aleksandr V.'),
-                                  CustomText(text: 'Delivered'),
+                                  CustomText(text: toDayModelList[index].leftText),
+                                  CustomText(text: toDayModelList[index].rightText),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  CustomText(text: 'Cash on delivery',color: liteGreyColor),
-                                  CustomText(text: '24.07.22 12:30',color: liteGreyColor),
+                                  CustomText(text: toDayModelList[index].leftText2,color: liteGreyColor),
+                                  CustomText(text: toDayModelList[index].leftText2,color: liteGreyColor),
                                 ],
                               ),
                             ],
@@ -164,7 +163,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
               height: 140,width: double.infinity,
               child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: 2,
+                itemCount: yesTerDayModelList.length,
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Column(
@@ -176,8 +175,8 @@ class _CompletedScreenState extends State<CompletedScreen> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: whiteColor),
-                        child: const ListTile(
-                          leading: CircleAvatar(radius: 20,backgroundImage: AssetImage(photo)),
+                        child: ListTile(
+                          leading: CircleAvatar(radius: 20,backgroundImage: yesTerDayModelList[index].image),
                           title: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,15 +184,15 @@ class _CompletedScreenState extends State<CompletedScreen> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  CustomText(text: 'Aleksandr V.'),
-                                  CustomText(text: 'Delivered'),
+                                  CustomText(text: yesTerDayModelList[index].leftText),
+                                  CustomText(text: yesTerDayModelList[index].rightText),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  CustomText(text: 'Cash on delivery',color: liteGreyColor),
-                                  CustomText(text: '24.07.22 12:30',color: liteGreyColor),
+                                  CustomText(text: yesTerDayModelList[index].leftText2,color: liteGreyColor),
+                                  CustomText(text: yesTerDayModelList[index].rightText2,color: liteGreyColor),
                                 ],
                               ),
                             ],
@@ -205,8 +204,9 @@ class _CompletedScreenState extends State<CompletedScreen> {
                 ),),
             ),
             ///left and right text
+            10.heightBox,
              Container(
-               height: 130,width: double.infinity,
+               height: 120,width: double.infinity,
                decoration: BoxDecoration(
                  borderRadius: BorderRadius.circular(15),
                  color: yellowColor),
@@ -235,7 +235,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
                     child: VerticalDivider(
                       indent: 5,
                       endIndent: 5,
-                      width: 40,
+                      width: 35,
                       color: blackColor
                     ),
                   ),
@@ -265,6 +265,22 @@ class _CompletedScreenState extends State<CompletedScreen> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: liteBlackColor),
+                        child: DropdownButton(
+                          padding: const EdgeInsets.only(left: 2),
+                          value: selectiveItem2,
+                          dropdownColor: greyColor,
+                          icon: const Icon(Icons.arrow_drop_down,color: whiteColor),
+                          items: listItem2.map((valueItem2) {
+                            return DropdownMenuItem(
+                                value: valueItem2,
+                                child: CustomText(text: valueItem2,color: whiteColor,));
+                          }).toList(),
+                          onChanged: (newValue2) {
+                            setState(() {
+                              selectiveItem2 = newValue2 as String;
+                            });
+                          },
+                        ),
                       ),
                     ],
                   ),
@@ -276,4 +292,45 @@ class _CompletedScreenState extends State<CompletedScreen> {
       ),
     );
   }
+  List<dynamic> toDayModelList =[
+    ToDayModel(
+      image: const AssetImage(photo),
+      leftText: 'Aleksandr V.',
+      rightText: 'Delivered',
+      leftText2: 'Cash on delivery',
+        rightText2: '24.07.22 12:30',
+    ),
+    ToDayModel(
+      image: const AssetImage(photo2),
+      leftText: 'Aleksandr V.',
+      rightText: 'Delivered',
+      leftText2: 'Cash on delivery',
+        rightText2: '24.07.22 12:30',
+    ),
+    ToDayModel(
+      image: const AssetImage(photo3),
+      leftText: 'Aleksandr V.',
+      rightText: 'Delivered',
+      leftText2: 'Cash on delivery',
+        rightText2: '24.07.22 12:30',
+    ),
+  ];
+  List<dynamic> yesTerDayModelList =[
+    YesTerDayModel(
+      image: const AssetImage(photo4),
+      leftText: 'Aleksandr V.',
+      rightText: 'Delivered',
+      leftText2: 'Cash on delivery',
+        rightText2: '24.07.22 12:30',
+    ),
+    YesTerDayModel(
+      image: const AssetImage(photo5),
+      leftText: 'Aleksandr V.',
+      rightText: 'Delivered',
+      leftText2: 'Cash on delivery',
+        rightText2: '24.07.22 12:30',
+    ),
+  ];
+
+
 }
