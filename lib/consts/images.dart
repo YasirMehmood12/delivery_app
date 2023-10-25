@@ -21,8 +21,14 @@ const chat = "asset/icons/chaBlack.png";
 const call = "asset/icons/Call.png";
 const chatYellow = "asset/icons/Chat.png";
 const locationWay = "asset/icons/route.png";
+const signature = "asset/icons/signatureIcon.png";
+const sign = "asset/icons/sign.png";
 
 // images
 const photo = "asset/images/photo.png";
 const photo2 = "asset/images/photo2.png";
+const photo3 = "asset/images/photo3.png";
+const photo4 = "asset/images/photo4.png";
+const photo5 = "asset/images/photo5.png";
+const photo6 = "asset/images/photo6.png";
 const map = "asset/images/map.png";

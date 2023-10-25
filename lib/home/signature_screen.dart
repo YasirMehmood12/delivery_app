@@ -1,18 +1,18 @@
-import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../consts/colors.dart';
 import '../consts/images.dart';
 import '../custom_widgets/custom_text.dart';
+import 'package:delivery_app/custom_widgets/mybutton.dart';
 
-class OrderUpdateScreen extends StatefulWidget {
-  const OrderUpdateScreen({super.key});
+class SignatureScreen extends StatefulWidget {
+  const SignatureScreen({super.key});
 
   @override
-  State<OrderUpdateScreen> createState() => _OrderUpdateScreenState();
+  State<SignatureScreen> createState() => _SignatureScreenState();
 }
 
-class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
+class _SignatureScreenState extends State<SignatureScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +55,7 @@ class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
               20.heightBox,
               /// start text
               const CustomText(
-                textAlign: TextAlign.center,
+                  textAlign: TextAlign.center,
                   text: 'Write the signer name and add a signature.',fontSize: 19),
               20.heightBox,
               /// image signature
@@ -70,15 +70,15 @@ class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
               Container(
                 height: 50,width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(15),
                   color: whiteColor,),
                 child: const Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Customer name',
+                        hintText: 'Customer name',
 
-                      border: InputBorder.none
+                        border: InputBorder.none
                     ),
                   ),
                 ),
@@ -123,7 +123,7 @@ class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
                     child: MyButton(
                       height: 50,
                       containerColor: yellowColor,
-                        circularRadius: BorderRadius.circular(15),
+                      circularRadius: BorderRadius.circular(15),
                       text: 'Done',
                       onTap: () {},
                       fontSize: 13,color: whiteColor,
@@ -134,14 +134,6 @@ class _OrderUpdateScreenState extends State<OrderUpdateScreen> {
               ),
             ],
           ),
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          margin: EdgeInsets.only(left: 50,right: 50),
-          height: 50,
-          color: Colors.red,
         ),
       ),
     );
