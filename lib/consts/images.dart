@@ -21,6 +21,12 @@ const chat = "asset/icons/chaBlack.png";
 const call = "asset/icons/Call.png";
 const chatYellow = "asset/icons/Chat.png";
 const locationWay = "asset/icons/route.png";
+const customerSupport = "asset/images/customersupport.png";
+const money = "asset/images/money.png";
+const whatsapp = "asset/images/whatsapp.png";
+const warning = "asset/images/warning.png";
+const rename = "asset/images/rename.png";
+const googleMap = "asset/images/google_map.png";
 const signature = "asset/icons/signatureIcon.png";
 const sign = "asset/icons/sign.png";
 
