@@ -6,6 +6,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import 'order_options_screen.dart';
+
 class OutGoingTabbarScreen extends StatefulWidget {
   const OutGoingTabbarScreen({super.key});
 
@@ -61,7 +63,9 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                       const Spacer(),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const OrderOptionScreen()));
+                        },
                         child: Container(
                           height: 40,width: 100,
                           decoration: BoxDecoration(
@@ -262,12 +266,12 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                               ],
                             ),
                             const SizedBox(height: 8),
-                            Row(
+                            const Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Icon(Icons.location_on_outlined,color: greenColor),
-                                const SizedBox(width: 12),
-                                const Column(
+                                SizedBox(width: 12),
+                                Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     SizedBox(height: 5),

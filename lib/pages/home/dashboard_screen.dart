@@ -5,6 +5,9 @@ import 'package:delivery_app/model/dashboard_listview_model.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../../custom_widgets/icon_button.dart';
+import '../profile_pages/profile_screen.dart';
+
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
@@ -27,30 +30,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 children: [
                   const CustomText(text:'Dashboard',fontSize: 26),
                   const Spacer(),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 29,width: 29,
-                      decoration: const BoxDecoration(
-                          color: yellowColor,
-                          shape: BoxShape.circle,
-                          image: DecorationImage(image: AssetImage(notification))
-                      ),
-                    ),
+                  MyIconButton(
+                    onPressed: () {},
+                    color: yellowColor,
+                    image: const AssetImage(notification),
                   ),
-                  12.widthBox,
-                  GestureDetector(
-                    onTap:() {},
-                    child: Container(
-                      height: 29,width: 29,
-                      decoration: const BoxDecoration(
-                          color: yellowColor,
-                          shape: BoxShape.circle,
-                          image: DecorationImage(image: AssetImage(profile))
-                      ),
-                    ),
-                  ),
-                  13.widthBox,
+                  MyIconButton(
+                      onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));},
+                      color: yellowColor,
+                      image: const AssetImage(profile)),
                 ],
               ),
               ///left text and right text
