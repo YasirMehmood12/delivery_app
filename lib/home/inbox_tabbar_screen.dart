@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../consts/colors.dart';
-
 class InboxTabbarScreen extends StatefulWidget {
   const InboxTabbarScreen({super.key});
 
