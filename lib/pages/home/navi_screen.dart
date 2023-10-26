@@ -1,5 +1,7 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
+import 'package:delivery_app/pages/new_order_pages/transactions_screen.dart';
+import 'package:delivery_app/pages/profile_pages/profile_screen.dart';
 import 'package:flutter/material.dart';
 import '../delivered_pages/completed_screen.dart';
 import '../new_order_pages/order_screen.dart';
@@ -20,7 +22,7 @@ class _NaviScreenState extends State<NaviScreen> {
     const OrderScreen(),
     const OnGoingScreen(),
     const CompletedScreen(),
-    const Text('data5'),
+    const TransactionsScreen(),
   ];
 
   @override

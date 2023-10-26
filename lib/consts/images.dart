@@ -33,6 +33,14 @@ const signatureSign = "asset/icons/signatureSign.png";
 const qrCode = "asset/icons/qrcode.png";
 const camera = "asset/icons/camera.png";
 const loveHand = "asset/icons/loveHand.png";
+const edit = "asset/icons/tablerEdit.png";
+const bike = "asset/icons/bike.png";
+const location2 = "asset/icons/location2.png";
+const report = "asset/icons/report.png";
+const lock = "asset/icons/lock-thin.png";
+const language = "asset/icons/language-line.png";
+const support = "asset/icons/person.png";
+const darkMode = "asset/icons/dark-mode.png";
 
 // images
 const photo = "asset/images/photo.png";
@@ -41,6 +49,7 @@ const photo3 = "asset/images/photo3.png";
 const photo4 = "asset/images/photo4.png";
 const photo5 = "asset/images/photo5.png";
 const photo6 = "asset/images/photo6.png";
+const photo7 = "asset/images/photo7.png";
 const map = "asset/images/map.png";
 const shoes = "asset/images/shoesImage.png";
 const qrCodeImage = "asset/images/qrcodeImage.png";

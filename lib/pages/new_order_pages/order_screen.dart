@@ -1,6 +1,7 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
+import 'package:delivery_app/pages/new_order_pages/transactions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -64,22 +65,19 @@ class _OrderScreenState extends State<OrderScreen>{
               color: whiteColor,
               borderRadius: BorderRadius.circular(10)
             ),
-            child: Row(
-              children: [
-               12.widthBox,
-                Image.asset(redWallet),
-                8.widthBox,
-                const CustomText(text: "6,730 \$"),
-                const Spacer(),
-                GestureDetector(
-                    onTap: () {
-                    },
-                    child: const Icon(
-                      Icons.arrow_forward_ios_outlined,
-                      size: 20,color: liteGreyColor,
-                    )),
-              ],
-            ),
+            child: ListTile(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const TransactionsScreen(),));
+              },
+              leading: Image.asset(redWallet),
+              title: const CustomText(text: "6,730 \$"),
+              trailing: GestureDetector(
+                   onTap: () {},
+                   child: const Icon(
+                     Icons.arrow_forward_ios_outlined,
+                     size: 20,color: liteGreyColor,
+                   )),
+            )
           ),
             /// two buttons
               16.heightBox,
