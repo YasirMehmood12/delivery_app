@@ -55,7 +55,7 @@ class CustomTextformField extends StatelessWidget {
             validator: validator,
             controller: myController,
             decoration: InputDecoration(
-              fillColor: Color(0xffFFFFFF),
+              fillColor: const Color(0xffFFFFFF),
               filled: true,
               hintText: hintText,
               hintStyle: GoogleFonts.poppins(
@@ -65,15 +65,15 @@ class CustomTextformField extends StatelessWidget {
               border: InputBorder.none,
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(width: 1, color: yellowColor),
+                borderSide: const BorderSide(width: 1, color: yellowColor),
               ),
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(width: 1, color: yellowColor),
+                borderSide: const BorderSide(width: 1, color: yellowColor),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Colors.white,
                   width: 1,
                 ),

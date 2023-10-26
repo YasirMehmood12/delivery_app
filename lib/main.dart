@@ -1,3 +1,5 @@
+import 'package:delivery_app/auth_screen/login.dart';
+import 'package:delivery_app/auth_screen/register_page.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:NaviScreen(),
+      home:LoginScreen(),
     );
   }
 }

@@ -41,6 +41,9 @@ const lock = "asset/icons/lock-thin.png";
 const language = "asset/icons/language-line.png";
 const support = "asset/icons/person.png";
 const darkMode = "asset/icons/dark-mode.png";
+const car = "asset/icons/car.png";
+const bikeYellow = "asset/icons/bikeYellow.png";
+const truck = "asset/icons/truck.png";
 
 // images
 const photo = "asset/images/photo.png";

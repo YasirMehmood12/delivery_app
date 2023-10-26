@@ -30,6 +30,7 @@ class _NaviScreenState extends State<NaviScreen> {
     return Scaffold(
       body: _className2.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: blackColor,
         currentIndex: _selectedIndex,
           onTap: (value) {
             setState(() {
