@@ -1,5 +1,8 @@
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/model/profile_model.dart';
+import 'package:delivery_app/pages/profile_pages/change_password.dart';
+import 'package:delivery_app/pages/profile_pages/chnage_language.dart';
+import 'package:delivery_app/pages/profile_pages/customer_supports.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
@@ -84,27 +87,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 itemCount: profileModel.length,
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
-                  child: Column(
-                  children: [
-                    Container(
-                      height: 60,width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: whiteColor
-                      ),
-                      child: ListTile(
-                        leading: Container(
-                        height:30,width: 30,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(image: profileModel[index].image)
-                      ),
-                  ),
-                        title: CustomText( text: profileModel[index].text),
-                        trailing: profileModel[index].icon,
-                      ),
-                    )
-                  ],
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => profileModel[index].navigate,));
+                    },
+                    child: Column(
+                    children: [
+                      Container(
+                        height: 60,width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: whiteColor
+                        ),
+                        child: ListTile(
+                          leading: Container(
+                          height:30,width: 30,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image: profileModel[index].image)
+                        ),
+                    ),
+                          title: CustomText( text: profileModel[index].text),
+                          trailing: profileModel[index].icon,
+                        ),
+                      )
+                    ],
               ),
+                  ),
                 ),)
             ],
           ),
@@ -116,32 +124,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
     ProfileScreenModel(
       image: const AssetImage(location2),
       text: 'Set location',
-      icon: const Icon(Icons.arrow_right)
+      icon: const Icon(Icons.arrow_right),
     ),
     ProfileScreenModel(
       image: const AssetImage(report),
       text: 'Report',
-      icon: const Icon(Icons.arrow_right)
+      icon: const Icon(Icons.arrow_right),
     ),
     ProfileScreenModel(
         image: const AssetImage(lock),
         text: 'Change Password',
-        icon: const Icon(Icons.arrow_right)
+        icon: const Icon(Icons.arrow_right),
+        navigate: const ChangePassword()
     ),
     ProfileScreenModel(
         image: const AssetImage(language),
         text: 'languages',
-        icon: const Icon(Icons.arrow_right)
+        icon: const Icon(Icons.arrow_right),
+        navigate: const ChangeLanguage()
     ),
     ProfileScreenModel(
         image: const AssetImage(support),
         text: 'Support',
-        icon: const Icon(Icons.arrow_right)
+        icon: const Icon(Icons.arrow_right),
+      navigate: const CustomerSupport()
     ),
     ProfileScreenModel(
         image: const AssetImage(darkMode),
         text: 'Dark mode',
-        icon: const Icon(Icons.arrow_right)
+        icon: const Icon(Icons.arrow_right),
     ),
   ];
 }

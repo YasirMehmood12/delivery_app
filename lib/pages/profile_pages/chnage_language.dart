@@ -18,16 +18,16 @@ class _ChangeLanguageState extends State<ChangeLanguage> {
       backgroundColor: whiteBackGround,
       appBar: AppBar(
         elevation: 0,
+        foregroundColor: blackColor,
         backgroundColor: whiteBackGround,
-        leading: Icon(Icons.arrow_back_ios, color: dallBlackColor),
-        title: OurText(
+        title: const OurText(
             text: "Change Language",
             fontSize: 24,
             fontBold: FontWeight.bold,
             textColor: dallBlackColor),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         child: Column(
           children: [
 

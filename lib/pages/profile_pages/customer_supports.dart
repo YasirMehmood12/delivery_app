@@ -21,8 +21,8 @@ class _CustomerSupportState extends State<CustomerSupport> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: whiteBackGround,
-        leading: Icon(Icons.arrow_back_ios, color: dallBlackColor),
-        title: OurText(
+        foregroundColor: blackColor,
+        title: const OurText(
             text: "Customer Support",
             fontSize: 24,
             fontBold: FontWeight.bold,
@@ -39,7 +39,7 @@ class _CustomerSupportState extends State<CustomerSupport> {
               Container(
                 height: 200,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(customerSupport), fit: BoxFit.cover),
                 ),
@@ -57,7 +57,7 @@ class _CustomerSupportState extends State<CustomerSupport> {
                       Container(
                         height: 30,
                         width: 30,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(money), fit: BoxFit.cover),
                           shape: BoxShape.circle,
@@ -67,14 +67,14 @@ class _CustomerSupportState extends State<CustomerSupport> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          OurText(
+                          const OurText(
                             text: "Payment&chargers",
                             fontBold: FontWeight.bold,
                             fontSize: 15,
                             textColor: Colors.white,
                           ),
                           3.heightBox,
-                          OurText(
+                          const OurText(
                             text: "About your payments and chargers",
                             fontBold: FontWeight.bold,
                             fontSize: 8,
@@ -96,7 +96,7 @@ class _CustomerSupportState extends State<CustomerSupport> {
                       Container(
                         height: 30,
                         width: 30,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(warning), fit: BoxFit.cover),
                           shape: BoxShape.circle,
@@ -106,14 +106,14 @@ class _CustomerSupportState extends State<CustomerSupport> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          OurText(
+                          const OurText(
                             text: "Reports",
                             fontBold: FontWeight.bold,
                             fontSize: 15,
                             textColor: Colors.white,
                           ),
                           3.heightBox,
-                          OurText(
+                          const OurText(
                             text: "About your payments and chargers",
                             fontBold: FontWeight.bold,
                             fontSize: 8,
@@ -135,14 +135,14 @@ class _CustomerSupportState extends State<CustomerSupport> {
                       Container(
                         height: 30,
                         width: 30,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(rename), fit: BoxFit.cover),
                           shape: BoxShape.circle,
                         ),
                       ),
                       20.widthBox,
-                      OurText(
+                      const OurText(
                         text: "Live chat on app",
                         fontBold: FontWeight.bold,
                         fontSize: 15,
@@ -163,14 +163,14 @@ class _CustomerSupportState extends State<CustomerSupport> {
                       Container(
                         height: 30,
                         width: 30,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(whatsapp), fit: BoxFit.cover),
                           shape: BoxShape.circle,
                         ),
                       ),
                       20.widthBox,
-                      OurText(
+                      const OurText(
                         text: "Chat on whatsapp",
                         fontBold: FontWeight.bold,
                         fontSize: 15,

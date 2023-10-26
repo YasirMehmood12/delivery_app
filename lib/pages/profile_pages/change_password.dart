@@ -19,9 +19,9 @@ class _ChangePasswordState extends State<ChangePassword> {
       backgroundColor: whiteBackGround,
       appBar: AppBar(
         elevation: 0,
+        foregroundColor: blackColor,
         backgroundColor: whiteBackGround,
-        leading: Icon(Icons.arrow_back_ios, color: dallBlackColor),
-        title: OurText(
+        title: const OurText(
             text: "Change Password",
             fontSize: 24,
             fontBold: FontWeight.bold,
@@ -34,22 +34,22 @@ class _ChangePasswordState extends State<ChangePassword> {
             child: Column(
               children: [
                 50.heightBox,
-                CustomTextformField(
+                const CustomTextformField(
                   tittleText: "Your Account",
                   hintText: "",
                 ),
                 20.heightBox,
-                CustomTextformField(
+                const CustomTextformField(
                   tittleText: "E-Mail",
                   hintText: "",
                 ),
                 20.heightBox,
-                CustomTextformField(
+                const CustomTextformField(
                   tittleText: "Verification",
                   hintText: "",
                 ),
                 100.heightBox,
-                OurButton(
+                const OurButton(
                   text: "Confrim",
                 ),
               ],

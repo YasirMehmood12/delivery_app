@@ -2,9 +2,11 @@ import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/pages/new_order_pages/transactions_screen.dart';
+import 'package:delivery_app/pages/profile_pages/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../../custom_widgets/icon_button.dart';
 import 'inbox_tabbar_screen.dart';
 import 'outgoing_tabbar_screen.dart';
 
@@ -31,30 +33,17 @@ class _OrderScreenState extends State<OrderScreen>{
             children: [
               const CustomText(text: 'Orders', fontSize: 26),
               const Spacer(),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: 29,
-                  width: 29,
-                  decoration: const BoxDecoration(
-                      color: yellowColor,
-                      shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage(notification))),
-                ),
+              MyIconButton(
+                onPressed: () {},
+                color: yellowColor,
+                image: const AssetImage(notification),
               ),
-              const SizedBox(width: 12),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: 29,
-                  width: 29,
-                  decoration: const BoxDecoration(
-                      color: yellowColor,
-                      shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage(profile))),
-                ),
-              ),
-              13.widthBox,
+              MyIconButton(
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(
+                        builder: (context) => const ProfileScreen()));},
+                  color: yellowColor,
+                  image: const AssetImage(profile))
             ],
           ),
             32.heightBox,

@@ -9,6 +9,9 @@ import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 
+import '../../custom_widgets/icon_button.dart';
+import '../profile_pages/profile_screen.dart';
+
 class SignatureNaviScreen extends StatefulWidget {
   const SignatureNaviScreen({super.key});
 
@@ -28,28 +31,17 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
         backgroundColor: whiteColor,
         title: const CustomText(text: '#758655', fontSize: 19),
         actions: [
-          IconButton(
+          MyIconButton(
             onPressed: () {},
-            icon: Container(
-              height: 29,
-              width: 29,
-              decoration: const BoxDecoration(
-                  color: yellowColor,
-                  shape: BoxShape.circle,
-                  image: DecorationImage(image: AssetImage(notification))),
-            ),
+            color: yellowColor,
+            image: const AssetImage(notification),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 29,
-              width: 29,
-              decoration: const BoxDecoration(
-                  color: yellowColor,
-                  shape: BoxShape.circle,
-                  image: DecorationImage(image: AssetImage(profile))),
-            ),
-          ),
+          MyIconButton(
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(
+                    builder: (context) => const ProfileScreen()));},
+              color: yellowColor,
+              image: const AssetImage(profile))
         ],
       ),
       body: DefaultTabController(
