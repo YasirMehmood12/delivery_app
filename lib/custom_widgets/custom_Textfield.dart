@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class CustomTextField extends StatelessWidget {
   final String? hintText;
   final String? labelText;
@@ -58,7 +59,6 @@ class CustomTextField extends StatelessWidget {
       obscureText: isPassword!,
       controller: controller,
       validator: (val) => validator!(val!),
-
       decoration: InputDecoration(
           hintText: hintText,
           hintStyle: hintStyle,

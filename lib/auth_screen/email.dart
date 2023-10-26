@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import '../consts/colors.dart';
 import '../custom_widgets/custom_Textfield.dart';
@@ -16,9 +17,8 @@ class Email extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             CustomText(text: "Email",),
-            SizedBox(height: 7,),
+            7.heightBox,
             SizedBox(
               height: 47,
               width:double.infinity,
@@ -36,7 +36,7 @@ class Email extends StatelessWidget {
 
               ),
             ),
-            SizedBox(height: 20,),
+            20.heightBox,
             CustomText(text: "Enter Password",),
             SizedBox(
               height: 47,
@@ -55,7 +55,7 @@ class Email extends StatelessWidget {
 
               ),
             ),
-            SizedBox(height: 48,),
+            48.heightBox,
             CustomButton(
               height: 52,
               text: "Login",
@@ -63,7 +63,7 @@ class Email extends StatelessWidget {
               backgroundColor: yellowColor,
               borderColor: yellowColor,
             ),
-            SizedBox(height: 25,),
+            25.heightBox,
             Row(
               children: [
                 CustomText(text: "Not Registered yet?",color: Color(0xff5A5A5A),),

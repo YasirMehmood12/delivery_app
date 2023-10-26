@@ -1,4 +1,5 @@
 import 'package:delivery_app/auth_screen/change_password.dart';
+import 'package:delivery_app/auth_screen/register_page.dart';
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/home/navi_screen.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
      //home: const NaviScreen()
      // home: LoginScreen(),
       home: ChangePasswordScreen(),
+      // home: RegisterScreen(),
     );
   }
 }
