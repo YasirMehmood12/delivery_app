@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1040214584559",
+    "project_id": "deliveryboy-d9a63",
+    "storage_bucket": "deliveryboy-d9a63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040214584559:android:85f40a28446a46a95a3f1a",
+        "android_client_info": {
+          "package_name": "com.example.delivery_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTigy-RrXGUu_tJzfhcbEP62n2gHU-u24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
