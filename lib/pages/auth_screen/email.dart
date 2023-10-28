@@ -1,10 +1,10 @@
-import 'package:delivery_app/auth_screen/register_page.dart';
+import 'package:delivery_app/pages/auth_screen/register_page.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../consts/colors.dart';
-import '../custom_widgets/custom_text.dart';
-import '../pages/home/navi_screen.dart';
+import '../../consts/colors.dart';
+import '../../custom_widgets/custom_text.dart';
+import '../home/navi_screen.dart';
 
 class Email extends StatefulWidget {
    const Email({super.key});
@@ -80,7 +80,7 @@ class _EmailState extends State<Email> {
             48.heightBox,
             MyButton(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const NaviScreen()));
+               Navigator.push(context, MaterialPageRoute(builder: (context) => const NaviScreen()));
               },
               height: 52,
               circularRadius: BorderRadius.circular(10),

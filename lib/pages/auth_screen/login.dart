@@ -1,9 +1,8 @@
-import 'package:delivery_app/auth_screen/email.dart';
-import 'package:delivery_app/auth_screen/phone_number.dart';
-import 'package:delivery_app/consts/colors.dart';
+import 'package:delivery_app/pages/auth_screen/phone_number.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../custom_widgets/custom_text.dart';
+import '../../custom_widgets/custom_text.dart';
+import 'email.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -61,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 23.heightBox,
-                Expanded(
+                const Expanded(
                   child: TabBarView(children: [
                     PhoneNumber(),
                    Email()

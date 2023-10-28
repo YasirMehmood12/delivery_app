@@ -44,6 +44,8 @@ const darkMode = "asset/icons/dark-mode.png";
 const car = "asset/icons/car.png";
 const bikeYellow = "asset/icons/bikeYellow.png";
 const truck = "asset/icons/truck.png";
+const pen = "asset/icons/pen.png";
+const navigateCirle = "asset/icons/navigateCircle.png";
 
 // images
 const photo = "asset/images/photo.png";
@@ -56,3 +58,4 @@ const photo7 = "asset/images/photo7.png";
 const map = "asset/images/map.png";
 const shoes = "asset/images/shoesImage.png";
 const qrCodeImage = "asset/images/qrcodeImage.png";
+const mapImage = "asset/images/image.png";

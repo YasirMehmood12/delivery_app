@@ -1,10 +1,10 @@
-import 'package:delivery_app/auth_screen/register_page.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
+import 'package:delivery_app/pages/auth_screen/register_page.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../consts/colors.dart';
-import '../custom_widgets/custom_text.dart';
+import '../../consts/colors.dart';
+import '../../custom_widgets/custom_text.dart';
 
 class PhoneNumber extends StatefulWidget {
 const PhoneNumber({super.key});

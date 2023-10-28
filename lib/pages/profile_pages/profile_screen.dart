@@ -3,6 +3,7 @@ import 'package:delivery_app/model/profile_model.dart';
 import 'package:delivery_app/pages/profile_pages/change_password.dart';
 import 'package:delivery_app/pages/profile_pages/chnage_language.dart';
 import 'package:delivery_app/pages/profile_pages/customer_supports.dart';
+import 'package:delivery_app/pages/profile_pages/set_location_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
@@ -125,6 +126,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       image: const AssetImage(location2),
       text: 'Set location',
       icon: const Icon(Icons.arrow_right),
+      navigate: const SetLocationScreen()
     ),
     ProfileScreenModel(
       image: const AssetImage(report),
