@@ -38,8 +38,11 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
           ),
           MyIconButton(
               onPressed: () {
-                Navigator.push(context,MaterialPageRoute(
-                    builder: (context) => const ProfileScreen()));},
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfileScreen()));
+              },
               color: yellowColor,
               image: const AssetImage(profile))
         ],
@@ -119,8 +122,10 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
                                         image: DecorationImage(
                                             image: AssetImage(signatureSign))),
                                   ),
-                                   const CustomText(text: 'Signature',)
-                                    //       Container(
+                                  const CustomText(
+                                    text: 'Signature',
+                                  )
+                                  //       Container(
                                 ],
                               ),
                             ]),
@@ -137,13 +142,15 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
                       height: 50,
                       border: Border.all(color: fulRedColor),
                       circularRadius: BorderRadius.circular(15),
-                      text: 'Close',
+                      child: CustomText(
+                        text: 'Close',
+                        fontSize: 13,
+                        fontWeight: FontWeight.w500,
+                        color: fulRedColor,
+                      ),
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      fontSize: 13,
-                      color: fulRedColor,
-                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   20.widthBox,
@@ -152,13 +159,21 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
                       height: 50,
                       containerColor: yellowColor,
                       circularRadius: BorderRadius.circular(15),
-                      text: 'Done',
+                      child: CustomText(
+                        text: 'Done',
+                        fontSize: 13,
+                        color: whiteColor,
+                        fontWeight: FontWeight.w500,
+                      ),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const DeliverySuccessScreen(),));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const DeliverySuccessScreen(),
+                            ));
                       },
-                      fontSize: 13,
-                      color: whiteColor,
-                      fontWeight: FontWeight.w500,
+
                     ),
                   ),
                 ],

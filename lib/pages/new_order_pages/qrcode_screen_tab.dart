@@ -58,7 +58,9 @@ class _QRCodeScreenTabState extends State<QRCodeScreenTab> {
               circularRadius: BorderRadius.circular(15),
               height: 60,
               onTap: () {},
-                text: 'Scan',color: whiteColor,fontSize: 25),
+                child: CustomText(
+                    text: 'Scan',color: whiteColor,fontSize: 25
+                )),
           )
         ],
       ),

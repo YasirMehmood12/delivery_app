@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Expanded(
                   child: TabBarView(children: [
                     PhoneNumber(),
-                   Email()
+                    Email()
                   ]),
                 ),
               ],

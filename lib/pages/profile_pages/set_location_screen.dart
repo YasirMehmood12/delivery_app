@@ -1,5 +1,6 @@
 import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
+import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -129,10 +130,10 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                           onTap: () {},
                           height: 50,
                           circularRadius: BorderRadius.circular(10),
-                          text: "Update",
-                          fontSize: 20,
+                          child: CustomText(
+                            text: "Update",fontSize: 20,  color: whiteColor,),
                           containerColor: yellowColor,
-                          color: whiteColor,
+
                         ),
                       ],
                     ),

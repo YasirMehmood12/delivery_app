@@ -66,7 +66,9 @@ class DeliverySuccessScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NaviScreen(),));
                     },
-                    text: 'View deliveries',color: whiteColor,fontSize: 20),
+                    child: const CustomText(
+                        text: 'View deliveries',color: whiteColor,fontSize: 20
+                    ),),
               )
         ]));
   }

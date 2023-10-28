@@ -1,7 +1,9 @@
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:delivery_app/pages/auth_screen/register_page.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -14,8 +16,15 @@ const PhoneNumber({super.key});
 }
 
 class _PhoneNumberState extends State<PhoneNumber> {
+  final TextEditingController _contryCodeController=TextEditingController();
   final TextEditingController _phoneNumberController=TextEditingController();
   final TextEditingController _passwordController=TextEditingController();
+
+  @override
+  void initState() {
+    _contryCodeController.text="+92";
+    super.initState();
+  }
 
   bool isPassword = true;
   @override
@@ -35,15 +44,33 @@ class _PhoneNumberState extends State<PhoneNumber> {
                   borderRadius: BorderRadius.circular(5),
                   color: whiteColor),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                child: TextField(
-                  controller: _phoneNumberController,
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    suffixIcon: Icon(Icons.check_circle,color: Color(0xff64C661),size: 16,),
-                    hintText: "09233378",
-                  ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      height: 50,
+                      width: 30,
+                      child: TextField(
+                        controller: _contryCodeController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    10.widthBox,
+                    const CustomText(text: '|',fontSize: 40,color: Colors.grey),
+                    Expanded(
+                      child: TextField(
+                        controller: _phoneNumberController,
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          suffixIcon: Icon(Icons.check_circle,color: Color(0xff64C661),size: 16,),
+                          hintText: "3339234",
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -86,8 +113,8 @@ class _PhoneNumberState extends State<PhoneNumber> {
                Navigator.push(context, MaterialPageRoute(builder: (context) => const NaviScreen()));
              },
              height: 52,
-             text: "Login",
-              color: Colors.white,
+             child: const CustomText(
+               text: "Login",color: Colors.white,),
               containerColor: yellowColor,
             ),
             25.heightBox,

@@ -4,30 +4,19 @@ class MyButton extends StatelessWidget {
   final double? height;
   final BorderRadiusGeometry? circularRadius;
   final Color? containerColor;
-  final String text;
-  final double? fontSize;
-  final FontWeight? fontWeight;
-  final Color? color;
   final TextDecoration? decoration;
-  final TextOverflow? overflow;
-  final double? letterSpacing;
   final void Function()? onTap;
   final List<BoxShadow>? boxShadow;
   final BoxBorder? border;
+  final Widget? child;
 
   const MyButton(
       {super.key,
       this.circularRadius,
       this.containerColor,
-      required this.text,
-      this.fontSize,
-      this.fontWeight,
-      this.color,
       this.decoration,
-      this.overflow,
-      this.letterSpacing,
       this.onTap,
-      this.height, this.boxShadow, this.border});
+      this.height, this.boxShadow, this.border, this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -43,17 +32,8 @@ class MyButton extends StatelessWidget {
                 borderRadius: circularRadius,
                 color: containerColor),
         child: Center(
-            child: Text(
-          text,
-          style: TextStyle(
-              fontSize: fontSize,
-              color: color,
-              fontWeight: fontWeight,
-              decoration: decoration,
-              letterSpacing: letterSpacing,
-              overflow: overflow),
-        )),
-      ),
+          child: child),
+          ),
     );
   }
 }

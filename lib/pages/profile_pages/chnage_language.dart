@@ -81,9 +81,11 @@ class _ChangeLanguageState extends State<ChangeLanguage> {
                 },
                 height: 52,
                 circularRadius: BorderRadius.circular(10),
-                text: "Save",
+                child: CustomText(
+                  text: "Save",color: whiteColor,
+                ),
                 containerColor: yellowColor,
-                color: whiteColor,
+
               ),
             ],
           ),
