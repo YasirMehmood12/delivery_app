@@ -2,19 +2,19 @@ import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+class VehicalRegisterScreen extends StatefulWidget {
+  const VehicalRegisterScreen({super.key});
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  State<VehicalRegisterScreen> createState() => _VehicalRegisterScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
+class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
 
   final defaultPinTheme = PinTheme(
       height: 50,
@@ -39,7 +39,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: const CustomText(
-          text: "Register",
+          text: "Vehicle Register",
           fontSize: 30,
           fontWeight: FontWeight.bold,
         ),
@@ -194,7 +194,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               40.heightBox,
               MyButton(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NaviScreen()));
+                },
                 child: CustomText(
                   text: 'Next',color: whiteColor,
                   fontSize: 20,

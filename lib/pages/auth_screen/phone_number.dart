@@ -1,5 +1,6 @@
 import 'package:delivery_app/custom_widgets/mybutton.dart';
-import 'package:delivery_app/pages/auth_screen/register_page.dart';
+import 'package:delivery_app/pages/auth_screen/create_register.dart';
+import 'package:delivery_app/pages/auth_screen/vehical_register.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -123,7 +124,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
                const CustomText(text: "Not Registered yet?",color: Color(0xff5A5A5A),),
                InkWell(
                  onTap: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterScreen()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateScreen()));
                  },
                    child: const CustomText(text: "Create an Account",color: Colors.black87,fontWeight: FontWeight.bold,)),
               ],

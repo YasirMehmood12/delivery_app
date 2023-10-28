@@ -1,5 +1,6 @@
 import 'package:delivery_app/custom_widgets/loading_indicator.dart';
-import 'package:delivery_app/pages/auth_screen/register_page.dart';
+import 'package:delivery_app/pages/auth_screen/create_register.dart';
+import 'package:delivery_app/pages/auth_screen/vehical_register.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class Email extends StatefulWidget {
 class _EmailState extends State<Email> {
   final TextEditingController _emailController = TextEditingController();
 
-  final TextEditingController _PasswordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   bool isPassword = true;
   bool isLoading = false;
@@ -56,7 +57,6 @@ class _EmailState extends State<Email> {
               ),
             ),
             20.heightBox,
-
             /// password
             const CustomText(text: "Enter Password"),
             10.heightBox,
@@ -70,7 +70,7 @@ class _EmailState extends State<Email> {
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: TextFormField(
                   validator: (value) => value!.isEmpty? "Kindly Enter Your Password" :null,
-                  controller: _PasswordController,
+                  controller: _passwordController,
                   obscureText: isPassword,
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -107,9 +107,7 @@ class _EmailState extends State<Email> {
               circularRadius: BorderRadius.circular(10),
               child: isLoading
                   ? loadingIndicator()
-                  : const CustomText(
-                text: "Login",color: whiteColor,
-              ),
+                  : CustomText( text: "Login",color: whiteColor),
               containerColor: yellowColor,
             ),
             25.heightBox,
@@ -120,7 +118,7 @@ class _EmailState extends State<Email> {
                 InkWell(
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => const RegisterScreen()));
+                          builder: (context) => const CreateScreen()));
                     },
                     child: const CustomText(text: "Create an Account",
                       color: Colors.black87,
@@ -135,7 +133,7 @@ class _EmailState extends State<Email> {
 
   _loginUser() async {
     await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: _emailController.text, password: _PasswordController.text).
+        email: _emailController.text, password: _passwordController.text).
     then((value){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NaviScreen()));
       Fluttertoast.showToast(msg: "Successfully Login");
