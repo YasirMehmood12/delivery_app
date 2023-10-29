@@ -7,7 +7,6 @@ import 'package:delivery_app/pages/profile_pages/set_location_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../custom_widgets/custom_text.dart';
 
@@ -38,18 +37,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             children: [
               /// Image, text and arrow forward
-              10.heightBox,
+              SizedBox(height: 10),
               Row(
                 children: [
                   const CircleAvatar(radius: 50,
                   backgroundImage: AssetImage(photo7)),
-                  10.widthBox,
+                  SizedBox(width: 10),
                   const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomText(text: 'Micky',fontSize: 24),
                       CustomText(text: '@Micky57689',color: liteGreyColor,fontSize: 15),
-
                     ],
                   ),
                   const Spacer(),
@@ -62,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
               /// profile list
-              20.heightBox,
+              SizedBox(height: 20),
               InkWell(
                 onTap: () {},
                 child: Container(
@@ -89,7 +87,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const SetLocationScreen(),));
@@ -112,7 +110,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               InkWell(
                 onTap: () {},
                 child: Container(
@@ -133,7 +131,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const ChangePassword()));
@@ -156,7 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const ChangeLanguage()));
@@ -179,7 +177,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const CustomerSupport()));
@@ -202,7 +200,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               InkWell(
                 onTap: () {},
                 child: Container(
@@ -223,8 +221,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              5.heightBox,
-
+              SizedBox(height: 5),
             ],
           ),
         ),

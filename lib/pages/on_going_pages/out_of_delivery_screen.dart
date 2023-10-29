@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -42,7 +41,7 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            20.heightBox,
+            SizedBox(height: 20),
             /// first container
             Container(
               height: 210,
@@ -149,7 +148,7 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
                       ),
                     ],
                   ),
-                  10.heightBox,
+                  SizedBox(height: 10),
                   /// cirle image  and text and date
                   ListTile(
                     leading: const CircleAvatar(
@@ -187,7 +186,7 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
                 ],
               ),
             ),
-            10.heightBox,
+            SizedBox(height: 10),
             /// second container
             Container(
               height: 130, width: double.infinity,
@@ -292,7 +291,7 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
                 ],
               ),
             ),
-            20.heightBox,
+            SizedBox(height: 20),
             /// finish route planing button
             GestureDetector(
               onTap: () {},
@@ -321,7 +320,7 @@ class _OutOfDeliveryScreenState extends State<OutOfDeliveryScreen> {
               ),
             ),
             /// big button location
-            50.heightBox,
+            SizedBox(height: 50),
             GestureDetector(
               onTap: () {},
               child: Container(

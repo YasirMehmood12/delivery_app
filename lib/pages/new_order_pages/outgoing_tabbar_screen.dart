@@ -4,8 +4,6 @@ import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import 'order_options_screen.dart';
 
 class OutGoingTabbarScreen extends StatefulWidget {
@@ -22,7 +20,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
       backgroundColor: Colors.grey.shade50,
       body: Column(
         children: <Widget>[
-          10.heightBox,
+          SizedBox(height: 10),
           Container(
             height: 275,
             decoration: BoxDecoration(
@@ -184,7 +182,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
               ),
             ),
           ),
-          10.heightBox,
+          SizedBox(height: 10),
           Container(
             height: 370,
             decoration: BoxDecoration(
@@ -196,7 +194,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
               child: Column(
                 children: [
                   /// money and number and more vertical button
-                  25.heightBox,
+                  SizedBox(height: 25),
                   Row(
                     children: [
                       const CustomText(text: '36 \$',fontSize: 17),
@@ -207,7 +205,7 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                     ],
                   ),
                   /// two Buttons
-                  8.heightBox,
+                  SizedBox(height: 8),
                   Row(
                     children: [
                       GestureDetector(
@@ -226,9 +224,9 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                     ],
                   ),
-                  16.heightBox,
+                  SizedBox(height: 16),
                   const Divider(),
-                  16.heightBox,
+                  SizedBox(height: 16),
                   /// second text
                   Row(
                     children: [
@@ -326,9 +324,9 @@ class _OutGoingTabbarScreenState extends State<OutGoingTabbarScreen> {
                       ),
                     ],
                   ),
-                  10.heightBox,
+                  SizedBox(height: 10),
                   const Divider(),
-                  10.heightBox,
+                  SizedBox(height: 10),
                   /// cirle image  and text and date
                   ListTile(
                     leading: const CircleAvatar(

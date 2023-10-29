@@ -1,7 +1,6 @@
 import 'package:delivery_app/custom_widgets/icon_button.dart';
 import 'package:delivery_app/model/delivered_model.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -54,7 +53,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            10.heightBox,
+            SizedBox(height: 10),
 
             /// today and drop button
             Row(
@@ -231,7 +230,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
             ),
 
             ///left and right text
-            10.heightBox,
+            SizedBox(height: 10),
             Container(
               height: 120,
               width: double.infinity,
@@ -239,7 +238,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
                   borderRadius: BorderRadius.circular(15), color: yellowColor),
               child: Row(
                 children: [
-                  15.widthBox,
+                  SizedBox(width: 15),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -256,7 +255,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
                           fontSize: 24,
                         )),
                       ),
-                      5.heightBox,
+                      SizedBox(height: 5),
                       const CustomText(
                         text: '\t\t Order\ncomplete',
                         color: whiteColor,
@@ -284,7 +283,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
                           fontSize: 18,
                         )),
                       ),
-                      5.heightBox,
+                      SizedBox(height: 5),
                       const CustomText(
                         text: 'Today earning',
                         color: whiteColor,
@@ -295,7 +294,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
                   const Spacer(),
                   Column(
                     children: [
-                      5.heightBox,
+                      SizedBox(height: 5),
                       Container(
                         height: 25,
                         width: 100,
@@ -325,7 +324,6 @@ class _CompletedScreenState extends State<CompletedScreen> {
                       ),
                     ],
                   ),
-                  5.widthBox
                 ],
               ),
             ),

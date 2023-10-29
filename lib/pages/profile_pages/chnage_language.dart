@@ -2,11 +2,8 @@ import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/model/change_langauge_model.dart';
 import 'package:delivery_app/pages/profile_pages/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../custom_widgets/custom_text.dart';
 import '../../custom_widgets/mybutton.dart';
-import '../../custom_widgets/our_text.dart';
-
 
 class ChangeLanguage extends StatefulWidget {
   const ChangeLanguage({super.key});
@@ -39,11 +36,11 @@ class _ChangeLanguageState extends State<ChangeLanguage> {
         elevation: 0,
         foregroundColor: blackColor,
         backgroundColor: whiteBackGround,
-        title: const OurText(
+        title: const CustomText(
             text: "Change Language",
             fontSize: 24,
-            fontBold: FontWeight.bold,
-            textColor: dallBlackColor),
+            fontWeight: FontWeight.bold,
+            color: dallBlackColor),
       ),
       body: SingleChildScrollView(
         child: Padding(

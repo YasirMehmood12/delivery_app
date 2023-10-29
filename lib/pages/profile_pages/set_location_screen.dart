@@ -2,8 +2,6 @@ import 'package:delivery_app/consts/colors.dart';
 import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../custom_widgets/mybutton.dart';
 
 class SetLocationScreen extends StatefulWidget {
@@ -67,7 +65,7 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                               image: DecorationImage(image: AssetImage(pen),fit: BoxFit.fill)
                             ),
                               )),
-                      10.widthBox,
+                      SizedBox(width: 10),
                       InkWell(
                           onTap: () {},
                           child: Container(
@@ -76,10 +74,10 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                                 image: DecorationImage(image: AssetImage(navigateCirle),fit: BoxFit.fill)
                             ),
                           )),
-                      10.widthBox,
+                      SizedBox(width: 10),
                     ],
                   ),
-                  60.heightBox
+                  SizedBox(height: 60),
                 ],
               ),
             ),
@@ -98,12 +96,12 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Column(
                       children: [
-                        10.heightBox,
+                        SizedBox(height: 10),
                         Container(
                           height: 3,width: 150,
                           color: liteWhiteColor,
                         ),
-                        15.heightBox,
+                        SizedBox(height: 15),
                         Container(
                           height: 50,width: double.infinity,
                           decoration: BoxDecoration(
@@ -125,7 +123,7 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                             ),
                           ),
                         ),
-                        30.heightBox,
+                        SizedBox(height: 30),
                         MyButton(
                           onTap: () {},
                           height: 50,

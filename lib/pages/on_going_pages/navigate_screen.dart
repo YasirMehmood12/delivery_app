@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -96,7 +95,7 @@ class _NavigateScreenState extends State<NavigateScreen> {
                               ),
                               child: Column(
                                 children: [
-                                  10.heightBox,
+                                  SizedBox(height: 10),
                                   ListTile(
                                       leading: const CircleAvatar(
                                           backgroundImage: AssetImage(photo2),
@@ -170,7 +169,7 @@ class _NavigateScreenState extends State<NavigateScreen> {
                                       ),
                                     ),
                                   ),
-                                  10.heightBox
+                                  SizedBox(height: 10),
                                 ],
                               ),
                             ),
@@ -251,28 +250,28 @@ class _NavigateScreenState extends State<NavigateScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              35.widthBox,
+              SizedBox(width: 0),
               const Column(
                 children: [
                   Icon(Icons.location_on_sharp,color: fulRedColor),
                   CustomText(text: '324')
                 ],
               ),
-              0.widthBox,
+              SizedBox(width: 0),
               const Column(
                 children: [
                   Icon(Icons.location_on_sharp,color: fulRedColor),
                   CustomText(text: '624')
                 ],
               ),
-              0.widthBox,
+              SizedBox(width: 0),
               const Column(
                 children: [
                   Icon(Icons.location_on_sharp,color: fulRedColor),
                   CustomText(text: '824')
                 ],
               ),
-              0.widthBox,
+              SizedBox(width: 0),
             ],
           ),
         )

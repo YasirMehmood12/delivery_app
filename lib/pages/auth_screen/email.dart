@@ -1,11 +1,9 @@
 import 'package:delivery_app/custom_widgets/loading_indicator.dart';
 import 'package:delivery_app/pages/auth_screen/create_register.dart';
-import 'package:delivery_app/pages/auth_screen/vehical_register.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../custom_widgets/custom_text.dart';
 import '../home/navi_screen.dart';
@@ -35,7 +33,7 @@ class _EmailState extends State<Email> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomText(text: "Email",),
-            10.heightBox,
+            SizedBox(height: 10),
 
             /// email
             Container(
@@ -56,10 +54,10 @@ class _EmailState extends State<Email> {
                 ),
               ),
             ),
-            20.heightBox,
+            SizedBox(height: 20),
             /// password
             const CustomText(text: "Enter Password"),
-            10.heightBox,
+            SizedBox(height: 10),
             Container(
               height: 70,
               width: double.infinity,
@@ -90,7 +88,7 @@ class _EmailState extends State<Email> {
                 ),
               ),
             ),
-            48.heightBox,
+            SizedBox(height: 48),
             MyButton(
               onTap: () async {
                 if(key.currentState!.validate()){
@@ -110,7 +108,7 @@ class _EmailState extends State<Email> {
                   : CustomText( text: "Login",color: whiteColor),
               containerColor: yellowColor,
             ),
-            25.heightBox,
+            SizedBox(height: 25),
             Row(
               children: [
                 const CustomText(

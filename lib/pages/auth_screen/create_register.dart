@@ -1,10 +1,7 @@
-import 'package:delivery_app/pages/auth_screen/email.dart';
-import 'package:delivery_app/pages/auth_screen/login.dart';
 import 'package:delivery_app/pages/auth_screen/vehical_register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../custom_widgets/custom_text.dart';
 import '../../custom_widgets/loading_indicator.dart';
@@ -37,10 +34,10 @@ class _CreateScreenState extends State<CreateScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomText(text: "Register",fontSize: 25,fontWeight: FontWeight.w500,),
-            20.heightBox,
+            const SizedBox(height: 20),
             ///email
             const CustomText(text: "Name"),
-            10.heightBox,
+            const SizedBox(height: 10),
             Container(
               height: 50,
               width: double.infinity,
@@ -58,11 +55,11 @@ class _CreateScreenState extends State<CreateScreen> {
                 ),
               ),
             ),
-            20.heightBox,
+            const SizedBox(height: 10),
 
             ///email
             const CustomText(text: "Email/Phone number"),
-            10.heightBox,
+            const SizedBox(height: 10),
             Container(
               height: 50,
               width: double.infinity,
@@ -80,11 +77,11 @@ class _CreateScreenState extends State<CreateScreen> {
                 ),
               ),
             ),
-            20.heightBox,
+            const SizedBox(height: 20),
 
             /// password
             const CustomText(text: "Enter Password"),
-            10.heightBox,
+            const SizedBox(height: 10),
             Container(
               height: 50,
               width: double.infinity,
@@ -117,7 +114,7 @@ class _CreateScreenState extends State<CreateScreen> {
 
             /// confirm password
             const CustomText(text: "Confirm Password"),
-            10.heightBox,
+            const SizedBox(height: 10),
             Container(
               height: 50,
               width: double.infinity,
@@ -129,14 +126,14 @@ class _CreateScreenState extends State<CreateScreen> {
                 child: TextFormField(
                   controller: _confirmPasswordController,
                   obscureText: isPassword,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "* * * * *",
                   ),
                 ),
               ),
             ),
-            48.heightBox,
+            const SizedBox(height: 48),
             MyButton(
               containerColor: yellowColor,
               height: 50, circularRadius: BorderRadius.circular(15),

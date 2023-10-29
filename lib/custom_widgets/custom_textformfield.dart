@@ -1,4 +1,3 @@
-import 'package:velocity_x/velocity_x.dart';
 import 'package:delivery_app/consts/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -45,7 +44,7 @@ class CustomTextformField extends StatelessWidget {
                 fontWeight: FontWeight.w500, fontSize: 16, color: Colors.black),
           ),
         ),
-        5.heightBox,
+        SizedBox(height: 8),
         SizedBox(
           height: 48,
           width: double.infinity,

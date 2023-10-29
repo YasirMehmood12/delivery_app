@@ -1,11 +1,7 @@
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:delivery_app/pages/auth_screen/create_register.dart';
-import 'package:delivery_app/pages/auth_screen/vehical_register.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../custom_widgets/custom_text.dart';
 
@@ -36,7 +32,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
           const CustomText(text: "Phone Number",),
-            10.heightBox,
+            const SizedBox(height: 10),
             /// phone
             Container(
               height: 50,
@@ -58,7 +54,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
                         ),
                       ),
                     ),
-                    10.widthBox,
+                    const SizedBox(width: 10),
                     const CustomText(text: '|',fontSize: 40,color: Colors.grey),
                     Expanded(
                       child: TextField(
@@ -75,10 +71,10 @@ class _PhoneNumberState extends State<PhoneNumber> {
                 ),
               ),
             ),
-            20.heightBox,
+            const SizedBox(height: 20),
             /// password
             const CustomText(text: "Enter Password"),
-            10.heightBox,
+            const SizedBox(height: 10),
             Container(
               height: 50,
               width:double.infinity,
@@ -107,7 +103,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
                 ),
               ),
             ),
-            48.heightBox,
+            const SizedBox(height: 48),
             MyButton(
               circularRadius: BorderRadius.circular(10),
              onTap: () {
@@ -118,7 +114,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
                text: "Login",color: Colors.white,),
               containerColor: yellowColor,
             ),
-            25.heightBox,
+            const SizedBox(height: 25),
             Row(
               children: [
                const CustomText(text: "Not Registered yet?",color: Color(0xff5A5A5A),),

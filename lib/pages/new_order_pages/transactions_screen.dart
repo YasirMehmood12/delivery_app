@@ -2,8 +2,6 @@ import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:delivery_app/model/transactions_model.dart';
 import 'package:delivery_app/pages/profile_pages/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -54,7 +52,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               /// two buttons
-              10.heightBox,
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -106,7 +104,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                 ],
               ),
               /// text december and list
-              30.heightBox,
+              SizedBox(height: 30),
               const CustomText(text: 'December',
               fontSize: 20,fontWeight: FontWeight.w500,),
               ListView.builder(
@@ -151,7 +149,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
                 ),),
 
               /// text2 and list2
-              30.heightBox,
+              SizedBox(height: 30),
               const CustomText(text: 'Withdraw',
                 fontSize: 20,fontWeight: FontWeight.w500,),
               ListView.builder(

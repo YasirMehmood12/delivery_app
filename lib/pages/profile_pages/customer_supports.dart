@@ -1,10 +1,7 @@
 import 'package:delivery_app/consts/images.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../consts/colors.dart';
-import '../../custom_widgets/our_text.dart';
-
+import '../../custom_widgets/custom_text.dart';
 
 class CustomerSupport extends StatefulWidget {
   const CustomerSupport({super.key});
@@ -22,18 +19,18 @@ class _CustomerSupportState extends State<CustomerSupport> {
         elevation: 0,
         backgroundColor: whiteBackGround,
         foregroundColor: blackColor,
-        title: const OurText(
+        title: const CustomText(
             text: "Customer Support",
             fontSize: 24,
-            fontBold: FontWeight.bold,
-            textColor: dallBlackColor),
+            fontWeight: FontWeight.bold,
+            color: dallBlackColor),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 50),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              50.heightBox,
+              const SizedBox(height: 50),
 
               /// Image Container
               Container(
@@ -45,8 +42,7 @@ class _CustomerSupportState extends State<CustomerSupport> {
                 ),
               ),
 
-              ///
-              20.heightBox,
+              const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
                     color: yellowColor, borderRadius: BorderRadius.circular(10)),
@@ -63,20 +59,20 @@ class _CustomerSupportState extends State<CustomerSupport> {
                           shape: BoxShape.circle,
                         ),
                       ),
-                      20.widthBox,
-                      Column(
+                      const SizedBox(width: 20),
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const OurText(
+                          CustomText(
                             text: "Payment&chargers",
-                            fontBold: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             fontSize: 15,
-                            textColor: Colors.white,
+                            color: Colors.white,
                           ),
-                          3.heightBox,
-                          const OurText(
+                          SizedBox(height: 3),
+                          CustomText(
                             text: "About your payments and chargers",
-                            fontBold: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             fontSize: 8,
                           ),
                         ],
@@ -85,7 +81,7 @@ class _CustomerSupportState extends State<CustomerSupport> {
                   ),
                 ),
               ),
-              20.heightBox,
+              const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
                     color: yellowColor, borderRadius: BorderRadius.circular(10)),
@@ -102,20 +98,20 @@ class _CustomerSupportState extends State<CustomerSupport> {
                           shape: BoxShape.circle,
                         ),
                       ),
-                      20.widthBox,
-                      Column(
+                      const SizedBox(width: 20),
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const OurText(
+                          CustomText(
                             text: "Reports",
-                            fontBold: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             fontSize: 15,
-                            textColor: Colors.white,
+                            color: Colors.white,
                           ),
-                          3.heightBox,
-                          const OurText(
+                          SizedBox(height: 3),
+                          CustomText(
                             text: "About your payments and chargers",
-                            fontBold: FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                             fontSize: 8,
                           ),
                         ],
@@ -124,7 +120,7 @@ class _CustomerSupportState extends State<CustomerSupport> {
                   ),
                 ),
               ),
-              20.heightBox,
+              const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
                     color: yellowColor, borderRadius: BorderRadius.circular(10)),
@@ -141,18 +137,18 @@ class _CustomerSupportState extends State<CustomerSupport> {
                           shape: BoxShape.circle,
                         ),
                       ),
-                      20.widthBox,
-                      const OurText(
+                      const SizedBox(width: 20),
+                      const CustomText(
                         text: "Live chat on app",
-                        fontBold: FontWeight.bold,
+                        fontWeight: FontWeight.bold,
                         fontSize: 15,
-                        textColor: Colors.white,
+                        color: Colors.white,
                       ),
                     ],
                   ),
                 ),
               ),
-              20.heightBox,
+              const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
                     color: yellowColor, borderRadius: BorderRadius.circular(10)),
@@ -169,12 +165,12 @@ class _CustomerSupportState extends State<CustomerSupport> {
                           shape: BoxShape.circle,
                         ),
                       ),
-                      20.widthBox,
-                      const OurText(
+                      const SizedBox(width: 20),
+                      const CustomText(
                         text: "Chat on whatsapp",
-                        fontBold: FontWeight.bold,
+                        fontWeight: FontWeight.bold,
                         fontSize: 15,
-                        textColor: Colors.white,
+                        color: Colors.white,
                       ),
                     ],
                   ),

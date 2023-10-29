@@ -1,9 +1,8 @@
 import 'package:delivery_app/custom_widgets/custom_textformfield.dart';
-import 'package:delivery_app/custom_widgets/our_button.dart';
-import 'package:delivery_app/custom_widgets/our_text.dart';
+import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
+import '../../custom_widgets/custom_text.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({super.key});
@@ -21,36 +20,38 @@ class _ChangePasswordState extends State<ChangePassword> {
         elevation: 0,
         foregroundColor: blackColor,
         backgroundColor: whiteBackGround,
-        title: const OurText(
+        title: const CustomText(
             text: "Change Password",
             fontSize: 24,
-            fontBold: FontWeight.bold,
-            textColor: dallBlackColor),
+            fontWeight: FontWeight.bold,
+            color: dallBlackColor),
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                50.heightBox,
-                const CustomTextformField(
+                SizedBox(height: 50),
+                CustomTextformField(
                   tittleText: "Your Account",
                   hintText: "",
                 ),
-                20.heightBox,
-                const CustomTextformField(
+                SizedBox(height: 20),
+                CustomTextformField(
                   tittleText: "E-Mail",
                   hintText: "",
                 ),
-                20.heightBox,
-                const CustomTextformField(
+                SizedBox(height: 20),
+                CustomTextformField(
                   tittleText: "Verification",
                   hintText: "",
                 ),
-                100.heightBox,
-                const OurButton(
-                  text: "Confrim",
+                SizedBox(height: 100),
+                MyButton(
+                  child: CustomText(
+                    text: "Confirm",
+                  )
                 ),
               ],
             ),

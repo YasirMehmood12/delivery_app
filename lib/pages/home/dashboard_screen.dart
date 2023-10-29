@@ -3,8 +3,6 @@ import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/model/dashboard_listview_model.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../custom_widgets/icon_button.dart';
 import '../profile_pages/profile_screen.dart';
 
@@ -89,7 +87,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
               const CustomText(text: 'Sales Figures',fontSize: 16,fontWeight: FontWeight.w500),
-              17.heightBox,
+              SizedBox(height: 17),
               Row(
                 children: [
                   const SizedBox(
@@ -103,21 +101,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ],
                     ),
                   ),
-                  22.heightBox,
+                  SizedBox(height: 22),
                   SizedBox(
                     height: 20,
                     child: Row(
                       children: [
                         const CircleAvatar(radius: 5,
                           backgroundColor: tealColor,),
-                        5.heightBox,
+                        SizedBox(height: 5),
                         const CustomText(text: 'sales'),
                       ],
                     ),
                   ),
                 ],
               ),
-              17.heightBox,
+              SizedBox(height: 17),
               /// text and diagram
               Container(
                 height: 260,width: double.infinity,
@@ -153,7 +151,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ]),
                 ),
               ),
-              12.heightBox,
+              SizedBox(height: 12),
               /// three button
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -196,7 +194,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ],
               ),
-              23.heightBox,
+              SizedBox(height: 23),
               SizedBox(
                 height: 150, width: double.infinity,
                 child: ListView.builder(

@@ -1,8 +1,6 @@
 import 'package:delivery_app/pages/new_order_pages/signature_navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:signature/signature.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -66,9 +64,9 @@ class _OrderOptionScreenState extends State<OrderOptionScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
-              10.heightBox,
+              SizedBox(height: 10),
               const CustomText(text: 'where did you leave the order?',fontSize: 19),
-              10.heightBox,
+              SizedBox(height: 10),
               ListTile(
                 title: const CustomText(text: 'To customer'),
                 leading: Checkbox(value: toCustomer, onChanged: (value) {
@@ -133,7 +131,7 @@ class _OrderOptionScreenState extends State<OrderOptionScreen> {
                   ],
                 ),
               ),
-              10.heightBox,
+              SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const SignatureNaviScreen()));

@@ -5,7 +5,6 @@ import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class VehicalRegisterScreen extends StatefulWidget {
   const VehicalRegisterScreen({super.key});
@@ -50,10 +49,10 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              40.heightBox,
+              const SizedBox(height: 40),
               const CustomText(
                 text: "Your name", fontSize: 15, fontWeight: FontWeight.bold,),
-              9.heightBox,
+              const SizedBox(height: 9),
 
               /// your name text field
               Container(
@@ -73,11 +72,11 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                   ),
                 ),
               ),
-              22.heightBox,
+              const SizedBox(height: 22),
               const CustomText(text: "Your driving license",
                 fontWeight: FontWeight.bold,
                 fontSize: 15,),
-              9.heightBox,
+              const SizedBox(height: 9),
 
               /// your driving license text field
               Container(
@@ -97,14 +96,13 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                   ),
                 ),
               ),
-              22.heightBox,
+              const SizedBox(height: 9),
               const CustomText(
                 text: "Select your vehicle ",
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
-              10.heightBox,
-
+              const SizedBox(height: 10),
               ///your vehicle
               Container(
                 height: 50, width: double.infinity,
@@ -122,9 +120,9 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                           value: "1",
                           child: Row(
                             children: [
-                              10.widthBox,
+                              const SizedBox(width: 10),
                               const CustomText(text: "Bike", color: blackColor),
-                              5.widthBox,
+                              const SizedBox(width: 5),
                               Container(
                                 height: 20, width: 20,
                                 decoration: const BoxDecoration(
@@ -138,9 +136,9 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                           value: "2",
                           child: Row(
                             children: [
-                              10.widthBox,
+                              const SizedBox(width: 10),
                               const CustomText(text: "Car", color: blackColor),
-                              5.widthBox,
+                              const SizedBox(width: 5),
                               Container(
                                 height: 20, width: 20,
                                 decoration: const BoxDecoration(
@@ -154,10 +152,10 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                           value: "3",
                           child: Row(
                             children: [
-                              10.widthBox,
+                              const SizedBox(width: 10),
                               const CustomText(
                                   text: "Truck", color: blackColor),
-                              5.widthBox,
+                              const SizedBox(width: 5),
                               Container(
                                 height: 20, width: 20,
                                 decoration: const BoxDecoration(
@@ -173,15 +171,14 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                     },),
                 ),
               ),
-
               /// your verification vehicle number
-              30.heightBox,
+              const SizedBox(height: 30),
               const CustomText(
                 text: "Your vehicle number",
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
-              10.heightBox,
+              const SizedBox(height: 10),
               Pinput(
                   controller: _vehicalController,
                   length: 6,
@@ -192,28 +189,23 @@ class _VehicalRegisterScreenState extends State<VehicalRegisterScreen> {
                       )
                   )
               ),
-              40.heightBox,
+              const SizedBox(height: 40),
               MyButton(
                 onTap: () {
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const NaviScreen()));
                 },
-                child: CustomText(
-                  text: 'Next',color: whiteColor,
-                  fontSize: 20,
-                ),
                 height: 50,
                 containerColor: yellowColor,
                 circularRadius: BorderRadius.circular(10),
-
+                child: const CustomText(
+                  text: 'Next',color: whiteColor,
+                  fontSize: 20,
+                ),
               )
             ],
           ),
         ),
       ),
     );
-  }
-
-  _register() {
-
   }
 }

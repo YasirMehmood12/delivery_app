@@ -4,8 +4,6 @@ import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/pages/new_order_pages/transactions_screen.dart';
 import 'package:delivery_app/pages/profile_pages/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../custom_widgets/icon_button.dart';
 import 'inbox_tabbar_screen.dart';
 import 'outgoing_tabbar_screen.dart';
@@ -46,7 +44,7 @@ class _OrderScreenState extends State<OrderScreen>{
                   image: const AssetImage(profile))
             ],
           ),
-            32.heightBox,
+            SizedBox(height: 32),
             /// wallet text button
               Container(
             height: 60,width: double.infinity,
@@ -69,7 +67,7 @@ class _OrderScreenState extends State<OrderScreen>{
             )
           ),
             /// two buttons
-              16.heightBox,
+              SizedBox(height: 16),
               Container(
                 height: 725,
                width: double.infinity,

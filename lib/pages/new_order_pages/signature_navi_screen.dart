@@ -3,12 +3,10 @@ import 'package:delivery_app/pages/new_order_pages/phone_screen_tab.dart';
 import 'package:delivery_app/pages/new_order_pages/qrcode_screen_tab.dart';
 import 'package:delivery_app/pages/new_order_pages/signature_screen_tab.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
-
 import '../../custom_widgets/icon_button.dart';
 import '../profile_pages/profile_screen.dart';
 
@@ -134,7 +132,7 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
                   ],
                 ),
               ),
-              25.heightBox,
+              SizedBox(height: 25),
               Row(
                 children: [
                   Expanded(
@@ -153,7 +151,7 @@ class _SignatureNaviScreenState extends State<SignatureNaviScreen> {
                       },
                     ),
                   ),
-                  20.widthBox,
+                  SizedBox(width: 20),
                   Expanded(
                     child: MyButton(
                       height: 50,

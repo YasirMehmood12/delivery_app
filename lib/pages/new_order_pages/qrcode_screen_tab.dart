@@ -3,7 +3,6 @@ import 'package:delivery_app/consts/images.dart';
 import 'package:delivery_app/custom_widgets/custom_text.dart';
 import 'package:delivery_app/custom_widgets/mybutton.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class QRCodeScreenTab extends StatefulWidget {
   const QRCodeScreenTab({super.key});
@@ -19,7 +18,7 @@ class _QRCodeScreenTabState extends State<QRCodeScreenTab> {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
-          10.heightBox,
+          SizedBox(height: 10),
           Container(
             height: 100,
             width: double.infinity,
@@ -43,7 +42,7 @@ class _QRCodeScreenTabState extends State<QRCodeScreenTab> {
               ],
             ),
           ),
-          10.heightBox,
+          SizedBox(height: 10),
           Container(
             height: 300,
             width: double.infinity,

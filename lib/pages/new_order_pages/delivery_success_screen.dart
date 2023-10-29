@@ -1,7 +1,5 @@
-import 'package:delivery_app/pages/delivered_pages/completed_screen.dart';
 import 'package:delivery_app/pages/home/navi_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -37,13 +35,13 @@ class DeliverySuccessScreen extends StatelessWidget {
         ),
         body: Column(
             children: [
-          100.heightBox,
+          SizedBox(height: 100),
           Container(
               height: 100,
               width: double.infinity,
               decoration: const BoxDecoration(
                   image: DecorationImage(image: AssetImage(loveHand)))),
-          10.heightBox,
+              SizedBox(height: 10),
           const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +54,7 @@ class DeliverySuccessScreen extends StatelessWidget {
                 color: liteBlackColor,fontSize: 20,),
             ],
           ),
-              100.heightBox,
+              SizedBox(height: 100),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: MyButton(

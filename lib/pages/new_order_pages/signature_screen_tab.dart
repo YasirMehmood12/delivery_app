@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../custom_widgets/custom_text.dart';
@@ -12,14 +10,14 @@ class SignatureScreenTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        10.heightBox,
+        SizedBox(height: 10),
 
         /// start text
         const CustomText(
             textAlign: TextAlign.center,
             text: 'Write the signer name and add a signature.',
             fontSize: 19),
-        10.heightBox,
+        SizedBox(height: 10),
 
         /// image signature
         Container(
@@ -29,7 +27,7 @@ class SignatureScreenTab extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               image: const DecorationImage(image: AssetImage(signature))),
         ),
-        10.heightBox,
+        SizedBox(height: 10),
 
         /// text field
         Container(
@@ -47,7 +45,7 @@ class SignatureScreenTab extends StatelessWidget {
             ),
           ),
         ),
-        10.heightBox,
+        SizedBox(height: 10),
         ///container signature and text
         Center(
           child: Column(
@@ -57,7 +55,7 @@ class SignatureScreenTab extends StatelessWidget {
                   text: 'Signature',
                   fontWeight: FontWeight.w400,
                   fontSize: 18),
-              5.heightBox,
+              SizedBox(height: 5),
               Container(
                 height: 200,
                 width: MediaQuery.of(context).size.width * 0.89,

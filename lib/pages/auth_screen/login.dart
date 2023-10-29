@@ -1,6 +1,5 @@
 import 'package:delivery_app/pages/auth_screen/phone_number.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 import '../../custom_widgets/custom_text.dart';
 import 'email.dart';
 
@@ -28,13 +27,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
-                5.heightBox,
+                SizedBox(height: 5),
                 const CustomText(
                   text: "Hello, welcome back",
                   color: Color(0xff595959),
                   fontWeight: FontWeight.bold,
                 ),
-                20.heightBox,
+                SizedBox(height: 20),
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -59,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ]),
                   ),
                 ),
-                23.heightBox,
+                SizedBox(height: 23),
                 const Expanded(
                   child: TabBarView(children: [
                     PhoneNumber(),
